@@ -8,14 +8,14 @@
 .welcome, .section1, .section2, .section3{
   min-height: calc(100vh - 85px );
   overflow: hidden;
-  overflow-y:auto
+  overflow-y:auto;
 }
 
 .welcome{
   background-color: lightskyblue;
 }
 .section1{
-  background-color: lightblue;
+  background-color: #fff;
 }
 .section2{
   background-color: lightgreen;

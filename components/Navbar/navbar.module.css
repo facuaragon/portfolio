@@ -17,6 +17,7 @@
 .header .logo{
   cursor: pointer;
   margin-right: auto;
+  transition: all 0.3s ease 0s;
 }
 
 .header .logo:hover{
