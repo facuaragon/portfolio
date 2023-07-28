@@ -1,0 +1,153 @@
+
+.header{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: sticky;
+    top: 0;
+}
+
+.header a{
+  cursor: pointer;
+}
+
+.header .logo{
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.header .logo:hover{
+  transform: scale(1.2);
+}
+
+.header .navLinks{
+  list-style: none;
+}
+
+.header .navLinks li{
+  display: inline-block;
+  padding: 0 20px;    
+}
+
+.header .navLinks li:hover{
+    transform: scale(1.1);
+}
+
+.header .navLinks a{
+  font-size: 700;
+  color: #eceff1; 
+}
+
+.header .navLinks a:hover,
+.overlay a:hover{
+  color: #000000;
+}
+
+
+.header .btn button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .menu .menuButton{
+  margin-left: 20px;
+  font-weight: 700;
+  color: #1b3039;
+  padding: 2px 25px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+}
+
+.header .btn button:hover,
+.header .menu .menuButton:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+.menu{
+  display:none
+}
+
+@media screen and (max-width:800px) {
+  .navLinks, .btn{
+    display: none
+  }
+  .menu {
+    display: inherit;
+  }
+}
+.header a {
+  text-decoration: none;
+}
+
+.header .overlay{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: rgb(151, 151, 151);
+  overflow: hidden;
+  transition: all 0.3s ease 0s
+}
+
+.header .overlayContent {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .overlay a{
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  font-weight: 700;
+  color: #eceff1;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+  color: #ffbc0e;
+}
+
+.header .overlay .close{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+  .header .overlay a{
+    font-size: 20px;
+  }
+  .header .overlay .close{
+    font-size: 40px;
+    top: 15px;
+    right: 35px
+  }
+}
+
+#mobileMenu{
+  width: 100%;
+}

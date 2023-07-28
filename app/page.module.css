@@ -1,0 +1,25 @@
+
+.main{
+  min-height: calc(100vh - 85px);
+  overflow: hidden;
+  overflow-y:auto
+}
+
+.welcome, .section1, .section2, .section3{
+  min-height: calc(100vh - 85px );
+  overflow: hidden;
+  overflow-y:auto
+}
+
+.welcome{
+  background-color: lightskyblue;
+}
+.section1{
+  background-color: lightblue;
+}
+.section2{
+  background-color: lightgreen;
+}
+.section3{
+  background-color: lightgoldenrodyellow;
+}
