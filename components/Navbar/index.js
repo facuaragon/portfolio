@@ -27,7 +27,7 @@ export default function Navbar() {
             offset={navbarHeight}
             duration={800}
           >
-            Facundo
+            Facundo Aragon
           </ScrollLink>
         </div>
         <nav>
