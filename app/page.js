@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <About />
       </section>
       <section id="section2" className={styles.section2}>
-        Projects
+        <Projects />
       </section>
       <section id="section3" className={styles.section3}>
         Contact Me
