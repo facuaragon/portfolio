@@ -9,7 +9,7 @@ export default function Projects() {
   const sliderWidth = `${projects.length * 100}%`;
   const projectWidth = `${100 / projects.length}%`;
   const handleSlide = (e) => {
-    setActive(e.target.id);
+    setActive(Number(e.target.id));
     setTransformX(Number(e.target.id) * -(100 / projects.length));
   };
   const handleArrowSlide = (e) => {
@@ -31,7 +31,7 @@ export default function Projects() {
           id="arrowLeft"
           onClick={handleArrowSlide}
           className={`${styles.arrow} ${styles.left} ${
-            active === 0 ? styles.disabled : ""
+            active == 0 ? styles.disabled : ""
           }`}
         >
           &#60;

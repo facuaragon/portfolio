@@ -25,7 +25,7 @@
     background-color: greenyellow;
     border-radius: 20px;
     height: calc(100vh - 85px - 100px - 40px - 30px);
-    margin: 20px;
+    margin: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,13 +57,14 @@
 .carrousel .arrow{
     font-size: 20px;
     position: absolute;
-    z-index: 1;
    cursor: pointer;
+   color:black;
+    z-index: 1;
+   
 }
 .carrousel .left{
     left: 5px;
     top: 40%;
-    z-index: 1;
 }
 .carrousel .right{
     right: 5px;
