@@ -4,12 +4,13 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Welcome from "@/components/Welcome";
 
 export default function Home() {
   return (
     <>
       <section id="welcome" className={styles.welcome}>
-        welcome
+        <Welcome />
       </section>
       <section id="section1" className={styles.section1}>
         <About />

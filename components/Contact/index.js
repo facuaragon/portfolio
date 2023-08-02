@@ -176,7 +176,7 @@ export default function Contact() {
           </div>
         </div>
         <p style={{ color: color }}>{message ? message : "\u00A0"}</p>
-        {/* {message ? <p style={{ color: color }}>{message}</p> : <p>&nbsp;</p>} */}
+
         <button>Submit</button>
       </form>
     </>

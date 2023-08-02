@@ -25,6 +25,16 @@ const simplon = localFont({
   ],
 });
 
+const neutra = localFont({
+  src: [
+    {
+      path: "../components/Fonts/Neutra-Text-Light-Alt.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
+
 const inter = Inter({ subsets: ["latin"] });
 const questrial = Questrial({
   weight: ["400"],
@@ -41,7 +51,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={neutra.className}>
         <ReduxProvider>
           <Navbar />
           {children}

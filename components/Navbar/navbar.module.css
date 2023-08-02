@@ -1,15 +1,33 @@
 
 .header{
-    background-color: lightgrey;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 85px;
-    padding: 5px 10%;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+  transition: all 1s;
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+  color: #fff;
+  background: none;
 }
+
+.scrolled{
+  transition: all 2s;
+  position: fixed;
+  top:0;
+  background-color: RGBA(0,0,0,0.40);
+  z-index: 2;
+  color:#fff;
+  backdrop-filter: blur(5px);
+}
+
+.gradient{
+  background: linear-gradient(180deg,rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.1) 90%);
+
+}
+
 
 .header a{
   cursor: pointer;
@@ -18,34 +36,57 @@
 .header .logo{
   cursor: pointer;
   margin-right: auto;
+  text-transform: lowercase;
   transition: all 0.3s ease 0s;
+  padding: 2px;
 }
 
 .header .logo:hover{
   transform: scale(1.2);
+  background-color: #000;
 }
 
 .header .navLinks{
   list-style: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.header .navLinks .down{
+  min-height: 50px;
+  margin-top: 40px;
+  border-left: 1px solid #fff;
+
+}
+
+.header .navLinks .up{
+  min-height: 50px;
+  margin-bottom: 15px;
+  border-left: 1px solid #fff;
+
 }
 
 .header .navLinks li{
   display: inline-block;
   padding: 0 20px;    
+  text-transform: lowercase;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 5px;
 }
 
 .header .navLinks li:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .header .navLinks a{
   font-size: 700;
-  color: #eceff1; 
+  padding: 2px;
 }
 
 .header .navLinks a:hover,
 .overlay a:hover{
-  color: #000000;
+  color: #fff;
+  background-color: #000000;
 }
 
 

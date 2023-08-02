@@ -1,13 +1,25 @@
 "use client";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import { Link as ScrollLink, animateScroll as Scroll } from "react-scroll";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [gradient, setGradient] = useState(false);
   const [menu, setMenu] = useState(false);
-  const navbarHeight = -84;
+  const navbarHeight = 0;
+
+  const changeBg = () => {
+    let scrollValue = window.scrollY;
+    if (scrollValue > 0) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  window.addEventListener("scroll", changeBg);
 
   const toggleNav = (e) => {
     e.preventDefault();
@@ -17,7 +29,11 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header
+        className={
+          scrolled ? `${styles.header} ${styles.scrolled}` : styles.header
+        }
+      >
         <div className={styles.logo}>
           <ScrollLink
             activeClass="active"
@@ -27,7 +43,7 @@ export default function Navbar() {
             offset={navbarHeight}
             duration={800}
           >
-            Facundo Aragon
+            home
           </ScrollLink>
         </div>
         <nav>
@@ -44,6 +60,7 @@ export default function Navbar() {
                 About
               </ScrollLink>
             </li>
+            <div className={styles.down}></div>
             <li>
               <ScrollLink
                 activeClass="active"
@@ -56,6 +73,7 @@ export default function Navbar() {
                 Projects
               </ScrollLink>
             </li>
+            <div className={styles.up}></div>
             <li>
               <ScrollLink
                 activeClass="active"
@@ -80,7 +98,7 @@ export default function Navbar() {
           id={menu ? styles.mobileMenu : undefined}
         >
           <a onClick={toggleNav} href="" className={styles.close}>
-            &times;
+            x
           </a>
           <div className={styles.overlayContent}>
             <ScrollLink

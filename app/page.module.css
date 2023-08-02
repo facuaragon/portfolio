@@ -1,18 +1,29 @@
 
 .main{
-  min-height: calc(100vh - 85px);
+  min-height: calc(100vh);
   overflow: hidden;
   overflow-y:auto
 }
 
-.welcome, .section1, .section2, .section3{
-  min-height: calc(100vh - 85px );
+.section1, .section2, .section3{
+  min-height: calc(100vh);
+  padding-top: 85px;
+  overflow: hidden;
+  overflow-y:auto;
+}
+.welcome{
+  min-height: calc(100vh );
   overflow: hidden;
   overflow-y:auto;
 }
 
+
 .welcome{
-  background-color: lightskyblue;
+  background-image: url('../public/welcomeBackground.jpeg');
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-position: 50% 70%;
 }
 .section1{
   background-color: #fff;
