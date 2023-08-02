@@ -7,7 +7,7 @@ import { Link as ScrollLink, animateScroll as Scroll } from "react-scroll";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [gradient, setGradient] = useState(false);
+
   const [menu, setMenu] = useState(false);
   const navbarHeight = 0;
 
