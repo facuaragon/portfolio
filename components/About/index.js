@@ -1,5 +1,25 @@
 import styles from "./about.module.css";
-import Image from "next/image";
+import localFont from "next/font/local";
+
+const simplon = localFont({
+  src: [
+    {
+      path: "../Fonts/SimplonMono-Bold.woff2",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/SimplonMono-Medium.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/SimplonNorm-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 export default function About() {
   return (
     <>

@@ -2,7 +2,35 @@
 import { useEffect, useState } from "react";
 import styles from "./contact.module.css";
 import { validations } from "./validateForm";
+import localFont from "next/font/local";
+// import createMail from "@/utils/nodemailer";
+
+import { close, success, error } from "@/redux/features/snackbar-slice";
+import { useDispatch, useSelector } from "react-redux";
+
+const simplon = localFont({
+  src: [
+    {
+      path: "../Fonts/SimplonMono-Bold.woff2",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/SimplonMono-Medium.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../Fonts/SimplonNorm-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 export default function Contact() {
+  const dispatch = useDispatch();
+  const message = useSelector((state) => state.snackbarReducer.value.message);
+  const color = useSelector((state) => state.snackbarReducer.value.color);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -27,7 +55,6 @@ export default function Contact() {
   };
 
   const handleChange = (e) => {
-    console.log(e.target.name);
     const property = e.target.name;
     const value = e.target.value;
     setForm({
@@ -36,10 +63,60 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const onSuccess = () => {
+    dispatch(success());
+  };
+  const onError = () => {
+    dispatch(error());
+  };
+
+  const closeMessage = () => {
+    dispatch(close());
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    validateForm(form);
-    console.log(errors);
+    const error = validations(form);
+    setErrors(error);
+    if (
+      error.lastName === "" &&
+      error.firstName === "" &&
+      error.email === "" &&
+      error.phone === "" &&
+      error.message === ""
+    ) {
+      // setForm({
+      //   firstName: "",
+      //   lastName: "",
+      //   email: "",
+      //   phone: "",
+      //   message: "",
+      // });
+
+      try {
+        const res = await fetch("api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        });
+        if (res.status != 200) {
+          throw new Error(res.statusText);
+        }
+        console.log("Mail --- enviado");
+        onSuccess();
+        setTimeout(() => {
+          closeMessage();
+        }, 3000);
+      } catch (error) {
+        console.log(error.message);
+        onError();
+        setTimeout(() => {
+          closeMessage();
+        }, 3000);
+      }
+    }
   };
   return (
     <>
@@ -98,6 +175,8 @@ export default function Contact() {
             <div className={styles.error}>{errors.message}</div>
           </div>
         </div>
+        <p style={{ color: color }}>{message ? message : "\u00A0"}</p>
+        {/* {message ? <p style={{ color: color }}>{message}</p> : <p>&nbsp;</p>} */}
         <button>Submit</button>
       </form>
     </>

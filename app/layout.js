@@ -1,9 +1,37 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Questrial } from "next/font/google";
 import Footer from "@/components/Footer";
+import localFont from "next/font/local";
+import { ReduxProvider } from "@/redux/provider";
+
+const simplon = localFont({
+  src: [
+    {
+      path: "../components/Fonts/SimplonMono-Bold.woff2",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../components/Fonts/SimplonMono-Medium.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../components/Fonts/SimplonNorm-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 const inter = Inter({ subsets: ["latin"] });
+const questrial = Questrial({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,10 +41,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={montserrat.className}>
+        <ReduxProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

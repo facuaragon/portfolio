@@ -33,6 +33,11 @@
 
 }
 
+.description p{
+
+    font-weight: 400;
+}
+
 
 @media screen and (max-width:800px) {
     .container{
