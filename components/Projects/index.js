@@ -1,76 +1,81 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import ArrowNext from "../icons/ArrowNext";
+import ArrowPrev from "../icons/ArrowPrev";
 import styles from "./projects.module.css";
 
 export default function Projects() {
-  const projects = ["1", "2", "3", "4"];
-  const [active, setActive] = useState(0);
+  const projects = [1, 2, 3, 4, 5, 6];
+  const count = projects.length - 1;
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [projectsWidth, setProjectsWidth] = useState(0);
+  const [movement, setMovement] = useState(0);
   const [transformX, setTransformX] = useState(0);
-  const sliderWidth = `${projects.length * 100}%`;
-  const projectWidth = `${100 / projects.length}%`;
-  const handleSlide = (e) => {
-    setActive(Number(e.target.id));
-    setTransformX(Number(e.target.id) * -(100 / projects.length));
-  };
-  const handleArrowSlide = (e) => {
-    if (e.target.id === "arrowLeft" && active > 0) {
-      const movement = active - 1;
-      setActive(active - 1);
-      setTransformX(movement * -(100 / projects.length));
+
+  useEffect(() => {
+    const projectsContent = document.getElementById("projectsContent");
+    const projectsContentWidth = projectsContent.offsetWidth;
+    setProjectsWidth(projectsContentWidth);
+    setMovement(projectsContentWidth / projects.length);
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  const handleTranslateNext = () => {
+    if (windowWidth - transformX + movement > projectsWidth) {
+      let xMove = windowWidth - transformX + movement - projectsWidth;
+      setTransformX(transformX - movement + xMove);
+    } else {
+      setTransformX(transformX - movement);
     }
-    if (e.target.id === "arrowRight" && active < projects.length - 1) {
-      const movement = active + 1;
-      setActive(active + 1);
-      setTransformX(movement * -(100 / projects.length));
+  };
+
+  const handleTranslatePrev = () => {
+    if (-transformX - movement <= 0) {
+      setTransformX(0);
+    } else {
+      setTransformX(transformX + movement);
     }
   };
+
   return (
     <>
-      <div className={styles.carrousel}>
-        <div
-          id="arrowLeft"
-          onClick={handleArrowSlide}
-          className={`${styles.arrow} ${styles.left} ${
-            active == 0 ? styles.disabled : ""
-          }`}
-        >
-          &#60;
+      <div className={styles.container}>
+        <div className={styles.firstContainer}></div>
+        <div className={styles.secondContainer}></div>
+        <div className={styles.tag}> projects</div>
+        <div className={styles.arrowLeft}>
+          <div className={styles.arrow} onClick={handleTranslatePrev}>
+            <ArrowPrev
+              id="projectArrowPrev"
+              width={40}
+              height={40}
+              fill={"#000"}
+            />
+          </div>
         </div>
         <div
-          className={styles.sliderContainer}
-          style={{
-            width: sliderWidth,
-            transform: `translateX(${transformX}%)`,
-          }}
+          id="projectsContent"
+          className={styles.content}
+          style={{ transform: `translateX(${transformX}px)` }}
         >
           {projects.map((project, i) => (
-            <div
-              key={i}
-              className={styles.project}
-              style={{ width: projectWidth }}
-            >{`Proyecto ${project}`}</div>
+            <React.Fragment key={i}>
+              <ProjectCard project={project} />
+              {i < count && <div className={styles.separator}></div>}
+            </React.Fragment>
           ))}
         </div>
-
-        <ul className={styles.points}>
-          {projects.map((project, i) => (
-            <li
-              id={i}
-              key={i}
-              onClick={handleSlide}
-              className={`${styles.point} ${i == active ? styles.active : ""}`}
-            ></li>
-          ))}
-        </ul>
-        <div
-          id="arrowRight"
-          onClick={handleArrowSlide}
-          onKeyDown={handleArrowSlide}
-          className={`${styles.arrow} ${styles.right} ${
-            active == projects.length - 1 ? styles.disabled : ""
-          }`}
-        >
-          &#62;
+        <div className={styles.arrowRight}>
+          <div className={styles.arrow} onClick={handleTranslateNext}>
+            <ArrowNext
+              id="projectArrowPrev"
+              width={40}
+              height={40}
+              fill={"#000"}
+            />
+          </div>
         </div>
       </div>
     </>

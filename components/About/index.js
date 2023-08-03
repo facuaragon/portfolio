@@ -45,7 +45,7 @@ export default function About() {
           <div className={styles.skills}>
             {skills.map((skill) => {
               return (
-                <div className={styles.skill}>
+                <div key={skill.name} className={styles.skill}>
                   <div className={styles.circles}>
                     <Skills knowledge={skill.knowledge} />
                   </div>

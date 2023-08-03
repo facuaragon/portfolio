@@ -1,77 +1,105 @@
-.carrousel{
-    background-color: aqua;
-    width: 90%;
-    max-width: 120em;
-    min-height: calc(100vh - 85px - 100px );
-    border-radius: 30px;
-    margin: 50px auto;
+.container{
+    display: flex;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    background-image: url("../../public/projectsBackground.jpeg");
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position: 0 0;
+    background-attachment: scroll;
     overflow: hidden;
     position: relative;
-
 }
 
-.carrousel .sliderContainer{
-    background-color: red;
-    /* width: from index.js */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 85px - 100px - 40px);
-    transition: transform 0.5s ease;
-}
-
-.carrousel .project{
-    /* width: from index.js */
-    background-color: greenyellow;
-    border-radius: 20px;
-    height: calc(100vh - 85px - 100px - 40px - 30px);
-    margin: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carrousel .points{
-    width: 100%;
-    list-style: none;
-    background-color: blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carrousel .point{
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 999px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.carrousel .points .active{
-    background-color: orange;
-}
-
-
-.carrousel .arrow{
-    font-size: 20px;
+.container .firstContainer{
+    min-width:150%;
+    height: 100vh;
     position: absolute;
-   cursor: pointer;
-   color:black;
+    background-color: #fff;
+    transform-origin: center;
+    transform:rotate(178deg) translateY(-250px) translateX(100px);
+
+}
+
+.container .secondContainer{
+    min-width:150%;
+    margin-top: 10px;
+    margin-left: 700px;
+    height: 100vh;
+    position: absolute;
+    background-color: #fff;
+    transform-origin: center;
+    transform:rotate(178deg) translateY(-250px) translateX(100px);
+    border-bottom: 1px solid #000;
+
+}
+
+.container .tag{
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    text-transform: lowercase;
+    color: #fff;
+    background-color: #000;
+    font-size: 50px;
+    letter-spacing: 20px;
+    padding-left: 5px;
+    padding-bottom: 10px;
     z-index: 1;
-   
-}
-.carrousel .left{
-    left: 5px;
-    top: 40%;
-}
-.carrousel .right{
-    right: 5px;
-    top: 40%;
 }
 
-.carrousel .disabled{
-    color:transparent;
+.container .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 55%;
+    background-color: rgb(245, 142, 142);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px ;
+    padding-right: 80px ;
+    transition: all 0.5s ease ;
+    
 }
 
+.container .content .separator{
+    min-height: 200px;
+    border-left: 1px solid #000 ;
+    margin: auto 30px
+}
+
+.arrowLeft, .arrowRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.arrow{
+    cursor: pointer;
+    transition: all 0.5s ease ;
+}
+.arrow:hover{
+    scale:1.4
+}
+.arrowLeft{
+    position:absolute;
+    bottom: 0;
+    left:0;
+    height: 55%;
+    z-index: 1;
+    background-color: blue;
+}
+
+.arrowRight{
+    position:absolute;
+    bottom: 0;
+    right:0;
+    height: 55%;
+    z-index: 1;
+    background-color: blue;
+    
+
+}

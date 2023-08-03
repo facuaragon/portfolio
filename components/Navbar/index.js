@@ -1,7 +1,7 @@
 "use client";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import { Link as ScrollLink, animateScroll as Scroll } from "react-scroll";
 

@@ -9,11 +9,21 @@ export default function Skills({ knowledge }) {
       {circles.map((circle, i) => {
         if (circle <= fullCircles) {
           return (
-            <FullCircle width={15} height={15} fill={`rgba(0,0,0,${opacity}`} />
+            <FullCircle
+              key={i}
+              width={15}
+              height={15}
+              fill={`rgba(0,0,0,${opacity}`}
+            />
           );
         } else {
           return (
-            <FullCircle width={15} height={15} fill={"rgb(209, 219, 237)"} />
+            <FullCircle
+              key={i}
+              width={15}
+              height={15}
+              fill={"rgb(209, 219, 237)"}
+            />
           );
         }
       })}
