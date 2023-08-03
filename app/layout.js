@@ -32,6 +32,11 @@ const neutra = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../components/Fonts/Neutra-Text-Bold.woff2",
+      weight: "900",
+      style: "normal",
+    },
   ],
 });
 

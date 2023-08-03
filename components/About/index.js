@@ -1,50 +1,61 @@
+import FullCircle from "../icons/FullCircle";
 import styles from "./about.module.css";
-import localFont from "next/font/local";
+import Skills from "./skills";
 
-const simplon = localFont({
-  src: [
-    {
-      path: "../Fonts/SimplonMono-Bold.woff2",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../Fonts/SimplonMono-Medium.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../Fonts/SimplonNorm-regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-});
 export default function About() {
+  let skills = [
+    { name: "JavaScript", knowledge: 90 },
+    { name: "HTML / CSS", knowledge: 90 },
+    { name: "React", knowledge: 90 },
+    { name: "PostgreSQL", knowledge: 80 },
+    { name: "Node.js", knowledge: 80 },
+    { name: "Express.js", knowledge: 80 },
+    { name: "MongoDB", knowledge: 50 },
+    { name: "TypeScript", knowledge: 20 },
+  ];
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.imgContainer}>
-          <img src="/pic.png" />
+    <div className={styles.container}>
+      <div className={styles.tag}>about me</div>
+      <div className={styles.firstContainer}>
+        <div className={styles.secondContainer}></div>
+      </div>
+      <div className={styles.content}>
+        <div className={styles.geometry}>
+          <div className={styles.topLine}></div>
+          <div className={styles.topLine}></div>
+          <div className={styles.rightLine}></div>
         </div>
-        <div className={styles.description}>
-          <p>
-            Full Stack Developer con formación como Diseñador Web. Experiencia
-            trabajando en React, Redux, NodeJs, Express, SQL entre otras
-            tecnologías el sector. Actualmente me encuentro en aprendizaje
-            continuo, desarrollando proyectos particulares que me permitan
-            afianzar lo aprendido e incrementar mis conocimientos. Soy una
-            persona sociable y proactiva que trabaja en equipo, acepto desafíos
-            y me caracterizo en resolver problemas. Estas habilidades las
-            adquirí durante mi experiencia laboral previa donde trabajé en el
-            sector de la construcción desarrollando mis tareas físicamente en la
-            obra. Como Jefe de Obra ejecuté las obras en el tiempo pactado y
-            dentro del presupuesto previsto, lideré equipos de arquitectos y
-            administrativos como así también el plantel de obra y
-            subcontratistas para la ejecución de todas las tareas.
-          </p>
+        <div className={styles.about}>
+          <div className={styles.description}>
+            <span>Full Stack Web Developer</span> con experiencia trabajando con
+            React, Redux, NodeJs, Express, SQL entre otras tecnologías. <br />
+            <br />
+            Actualmente me encuentro en aprendizaje continuo, desarrollando
+            proyectos particulares que me permitan afianzar lo aprendido y
+            ampliar mis conocimientos. <br />
+            <br />
+            Soy una persona sociable y proactiva que trabaja en equipo. Acepto
+            desafíos y me caracterizo en resolver problemas. Estas habilidades
+            las adquirí durante mi experiencia laboral previa, donde trabajé en
+            el sector de la construcción como Jefe de Obra. Ejecuté las obras en
+            tiempo y forma, lideré equipos de arquitectos y administrativos como
+            así también el plantel de obra y subcontratistas para la ejecución
+            de todas las tareas.
+          </div>
+          <div className={styles.skills}>
+            {skills.map((skill) => {
+              return (
+                <div className={styles.skill}>
+                  <div className={styles.circles}>
+                    <Skills knowledge={skill.knowledge} />
+                  </div>
+                  <div className={styles.technology}>{skill.name}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
