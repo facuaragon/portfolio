@@ -10,6 +10,7 @@ export default function About() {
     { name: "PostgreSQL", knowledge: 80 },
     { name: "Node.js", knowledge: 80 },
     { name: "Express.js", knowledge: 80 },
+    { name: "Next.js", knowledge: 70 },
     { name: "MongoDB", knowledge: 50 },
     { name: "TypeScript", knowledge: 20 },
   ];

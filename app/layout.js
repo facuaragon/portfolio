@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <Navbar />
           {children}
+          <div id="modal-root"></div>
           <Footer />
         </ReduxProvider>
       </body>

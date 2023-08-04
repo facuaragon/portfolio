@@ -55,14 +55,19 @@
     left: 0;
     min-width: 100%;
     min-height: 55%;
-    background-color: rgb(245, 142, 142);
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 60px ;
-    padding-right: 80px ;
+    margin-left: 20px ;
+    margin-right: 20px ;
+    padding-left: 30px;
+    padding-right: 90px;
     transition: all 0.5s ease ;
     
+}
+.container .content .project{
+    display: flex;
 }
 
 .container .content .separator{
@@ -76,10 +81,12 @@
     justify-content: center;
     align-items: center;
     
+    
 }
 .arrow{
     cursor: pointer;
     transition: all 0.5s ease ;
+    background-color: #616161;
 }
 .arrow:hover{
     scale:1.4
@@ -88,18 +95,52 @@
     position:absolute;
     bottom: 0;
     left:0;
+    width: 20px;
     height: 55%;
     z-index: 1;
-    background-color: blue;
+    background-color: RGBA(255,255,255,0.24);
+    backdrop-filter: blur(5px);
 }
 
 .arrowRight{
     position:absolute;
     bottom: 0;
     right:0;
+    width: 20px;
     height: 55%;
     z-index: 1;
-    background-color: blue;
-    
+    background-color: RGBA(255,255,255,0.24);
+    backdrop-filter: blur(5px);
+}
 
+
+
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width:700px) {
+    .container{
+        background-size:120%;
+        background-position: 0 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .container{
+        background-size:150%;
+        background-position: 0 0;
+    }
+
+    .container .tag{
+        position: absolute;
+        top: 250px;
+        left: 100px;
+        text-transform: lowercase;
+        color: #fff;
+        background-color: #000;
+        font-size: 50px;
+        letter-spacing: 10px;
+        padding-left: 5px;
+        padding-bottom: 10px;
+        z-index: 1;
+    }
 }

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useEffect } from "react";
+import Modal from "../Modal";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import ArrowNext from "../icons/ArrowNext";
 import ArrowPrev from "../icons/ArrowPrev";
@@ -13,6 +14,8 @@ export default function Projects() {
   const [projectsWidth, setProjectsWidth] = useState(0);
   const [movement, setMovement] = useState(0);
   const [transformX, setTransformX] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [modalProject, setModalProject] = useState();
 
   useEffect(() => {
     const projectsContent = document.getElementById("projectsContent");
@@ -39,8 +42,24 @@ export default function Projects() {
     }
   };
 
+  const openModal = (project) => {
+    setModalProject(project);
+    setShowModal(true);
+  };
+
   return (
     <>
+      {showModal && (
+        <Modal
+          onClose={() => {
+            setShowModal(false);
+            setModalProject();
+          }}
+          project={modalProject}
+        >
+          Project {modalProject}
+        </Modal>
+      )}
       <div className={styles.container}>
         <div className={styles.firstContainer}></div>
         <div className={styles.secondContainer}></div>
@@ -61,10 +80,14 @@ export default function Projects() {
           style={{ transform: `translateX(${transformX}px)` }}
         >
           {projects.map((project, i) => (
-            <React.Fragment key={i}>
+            <div
+              className={styles.project}
+              key={i}
+              onClick={() => openModal(project)}
+            >
               <ProjectCard project={project} />
               {i < count && <div className={styles.separator}></div>}
-            </React.Fragment>
+            </div>
           ))}
         </div>
         <div className={styles.arrowRight}>
