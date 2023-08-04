@@ -1,4 +1,3 @@
-import FullCircle from "../icons/FullCircle";
 import styles from "./about.module.css";
 import Skills from "./skills";
 
