@@ -18,7 +18,7 @@ const simplon = localFont({
       style: "normal",
     },
     {
-      path: "../components/Fonts/SimplonNorm-regular.woff2",
+      path: "../components/Fonts/SimplonNorm-Regular.woff2",
       weight: "400",
       style: "normal",
     },
