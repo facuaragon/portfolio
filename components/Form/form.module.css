@@ -1,0 +1,110 @@
+.form{
+    width: 60vw;
+    min-height: calc(100vh - 85px - 100px - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 100px;
+    background-color: gray;
+    border-radius: 20px;
+}
+.form .title{
+    font-size: 20px;
+    background-color: lightgrey;
+    border-radius: 20px 20px 0 0;
+    padding: 10px 10px
+}
+.form .group{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 60%;
+}
+.form p{
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.form .group .subGroup{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.form .subGroup input{
+    width: 17.5vw;
+    max-width: 200px;
+    min-width: 150px;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+.form  .group .subGroup .error{
+    margin-top: 5px;
+    color: red;
+    font-size: 13px;
+}
+
+.subGroup .required {
+	color: red;
+}
+
+.subGroup textarea{
+    height: 80px;
+    width: 36vw;
+    border-radius: 10px;
+    resize: none;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+
+}
+
+.form button{
+    margin: 0 auto 20px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+.form button:hover{
+    transform: scale(1.2);
+
+}
+
+
+@media screen and (max-width:800px) {
+    .form{
+        align-items: center;
+        margin-top: 25px;
+    }
+    .form .group{
+        flex-direction: column;
+        margin: auto;
+        width: 35%;
+        min-width: 150px;
+
+    }
+    .form .title{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form  .group .subGroup .error{
+        margin-bottom: 20px;
+    }
+    .form  .group .subGroup textarea{
+        margin-bottom: 20px;
+        width: 150px;
+
+    }
+    .subGroup textarea{
+        height: 130PX;
+    }
+  }

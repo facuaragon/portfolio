@@ -17,7 +17,7 @@ export const validations = (form) => {
       form.email
     )
   ) {
-    errors.email = "Format not valid";
+    errors.email = "E-mail not valid";
   } else {
     errors.email = "";
   }
