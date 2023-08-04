@@ -1,13 +1,12 @@
 "use client";
+import { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { useState } from "react";
 import MenuIcon from "../icons/MenuIcon";
 import { Link as ScrollLink, animateScroll as Scroll } from "react-scroll";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-
   const [menu, setMenu] = useState(false);
   const navbarHeight = 0;
 
@@ -19,7 +18,16 @@ export default function Navbar() {
       setScrolled(false);
     }
   };
-  window.addEventListener("scroll", changeBg);
+
+  useEffect(() => {
+    // Add event listener on mount
+    window.addEventListener("scroll", changeBg);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", changeBg);
+    };
+  }, []);
 
   const toggleNav = (e) => {
     e.preventDefault();
