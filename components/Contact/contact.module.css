@@ -4,6 +4,7 @@
     position: relative;
 }
 
+
 .section .background{
     min-width: 100%;
     min-height: 100vh;
@@ -33,6 +34,8 @@
     top:0;
     right: 0;
 }
+
+
 
 .section .background .lineDown{
     min-height: 250px;
@@ -96,10 +99,65 @@
 
 
 
-
 @media screen and (max-width:1000px){
     .section .background{
         
         background-position: 130%;
     }
+
+    .section .background .firstCover{
+        min-width: 10%;
+    }
+    .section .background .secondCover{
+        min-width: 75%;
+    }
+    .section .background .secondCover .borderRight{
+        min-width: 75px;
+    }
+    .section .background .secondCover .borderRight .boxes{
+        min-width: 75px;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .section .background{
+        background-image: none;
+    }
+    .section .background .firstCover{
+        min-width: 50px;
+    }
+    .section .background .lineDown{
+        min-width: 50%;
+
+    }
+    .section .background .secondCover{
+        min-width: 100%;
+        background-color: transparent;
+
+    }
+    .section .background .secondCover .borderRight .boxes{
+        display: none;
+    }
+    
+    .section .background .secondCover .borderRight .footer{
+
+        min-height: 150px;
+
+    }
+    .section .background .secondCover .borderRight .footer .footerRight{
+        min-width: 10%;
+        min-height: 150px;
+        right: 0;
+
+    }
+
+    .section .background .secondCover .borderRight .footer .footerLeft{
+        min-width: 90%;
+        min-height: 100px;
+        padding-bottom: 30px;
+    
+    }
+
+
 }

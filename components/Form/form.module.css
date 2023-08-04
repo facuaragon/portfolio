@@ -1,32 +1,40 @@
 .form{
-    width: 60vw;
-    min-height: calc(100vh - 85px - 100px - 100px);
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     margin: auto;
-    margin-top: 100px;
-    background-color: gray;
-    border-radius: 20px;
+    margin-left: 170px;
+    margin-top: 195px;
+    padding-top: 20px;
+    border: 1px solid #000;
+    position: relative;
 }
-.form .title{
-    font-size: 20px;
-    background-color: lightgrey;
-    border-radius: 20px 20px 0 0;
-    padding: 10px 10px
+
+.form .tag{
+    color: #fff;
+    background-color: #000;
+    min-width: 480px;
+    font-size: 40px;
+    letter-spacing: 25px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    position: absolute;
+    top:-90px;
+    left: -40px;
+    z-index: 1;
+
 }
-.form .group{
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    width: 60%;
-}
+
+
+
 .form p{
     justify-content: center;
     margin: 0 auto 15px;
 }
 
-.form .group .subGroup{
+.form .subGroup{
     display: flex;
     flex-direction: column;
     
@@ -34,19 +42,22 @@
 
 
 .form .subGroup input{
-    width: 17.5vw;
+    width: 200px;
     max-width: 200px;
     min-width: 150px;
-    border-radius: 10px;
     border: none;
-    height: 30px;
+    height: 25px;
     margin-top: 5px;
     padding-left: 5px;
+    border: 1px solid #000
+
 }
-.form  .group .subGroup .error{
+.form .subGroup .error{
     margin-top: 5px;
+    margin-bottom: 10px;
     color: red;
-    font-size: 13px;
+    font-size: 10px;
+    min-height: 10px;
 }
 
 .subGroup .required {
@@ -55,56 +66,69 @@
 
 .subGroup textarea{
     height: 80px;
-    width: 36vw;
-    border-radius: 10px;
+    min-width: 200px;
     resize: none;
     margin-top: 5px;
     padding-left: 5px;
     padding-top: 5px;
+    border: 1px solid #000
+
 
 }
 
-.form button{
-    margin: 0 auto 20px;
-    width: 150px;
-    border-radius: 10px;
+.form .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    width: 80px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    color: #fff;
+    background-color: #474747;
 
 }
 
-.form button:hover{
+.form .button:hover{
     transform: scale(1.2);
 
 }
 
-
-@media screen and (max-width:800px) {
+@media screen and (max-width:1200px) {
     .form{
-        align-items: center;
-        margin-top: 25px;
+        margin-left: 70px;
+        margin-top: 195px;
     }
-    .form .group{
-        flex-direction: column;
-        margin: auto;
-        width: 35%;
-        min-width: 150px;
+}
+
+@media screen and (max-width:700px) {
+    .form{
+        width: 300px;
+        min-height: 500px;
+        margin:auto;
+        margin-top: 195px;
 
     }
-    .form .title{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .form  .group .subGroup .error{
-        margin-bottom: 20px;
-    }
-    .form  .group .subGroup textarea{
-        margin-bottom: 20px;
-        width: 150px;
+    .form .tag{
+        min-width: 380px;
+        font-size: 30px;
+        letter-spacing: 20px;
+        padding-left: 30px;
+        padding-bottom: 10px;
+        top: -80px;
+        left: -35px
 
+    
     }
+}
+
+@media screen and (max-height:800px) {
     .subGroup textarea{
-        height: 130PX;
+        height: 60px;
+
+    
+    
     }
-  }
+}
