@@ -5,8 +5,14 @@ import GitHubMarkWhite from "../icons/GitHubMarkWhite";
 import LinkedIn from "../icons/LinkedIn";
 import Instagram from "../icons/Instagram";
 import Twitter from "../icons/Twitter";
+import CV from "../icons/CV";
 
 export default function Contact() {
+  const handleDownload = () => {
+    const pdfFileName = "CV-Facundo-Aragon.pdf"; // Replace with your actual PDF file name
+    const downloadLink = `../../${pdfFileName}`;
+    window.open(downloadLink, "_blank");
+  };
   return (
     <>
       <section className={styles.section}>
@@ -34,6 +40,9 @@ export default function Contact() {
                   </a>
                   <a href="https://twitter.com/facundoaragon">
                     <Twitter width={20} height={20} fill={"#000000"} />
+                  </a>
+                  <a onClick={handleDownload} className={styles.cv}>
+                    <CV width={20} height={20} fill={"#000000"} />
                   </a>
                 </div>
                 <div className={styles.footerRight}></div>

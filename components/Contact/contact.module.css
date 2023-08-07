@@ -93,6 +93,10 @@
 .section .background .secondCover .borderRight .footer .footerLeft a{
     transition: all 0.3s ease;
 }
+
+.section .background .secondCover .borderRight .footer .footerLeft .cv{
+    cursor: pointer;
+}
 .section .background .secondCover .borderRight .footer .footerLeft a:hover{
     scale: 1.3;
 }
