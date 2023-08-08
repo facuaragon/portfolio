@@ -87,6 +87,9 @@
     cursor: pointer;
     transition: all 0.5s ease ;
     background-color: #616161;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .arrow:hover{
     scale:1.4
