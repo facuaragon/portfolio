@@ -4,6 +4,8 @@ import { Inter, Montserrat, Questrial } from "next/font/google";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import { ReduxProvider } from "@/redux/provider";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
 
 const simplon = localFont({
   src: [

@@ -1,14 +1,16 @@
+"use client";
 import styles from "./welcome.module.css";
+import { useSelector } from "react-redux";
 import { welcome } from "@/utils/data";
-
 export default function Welcome() {
+  const language = useSelector((state) => state.languageReducer.value.language);
   return (
     <>
       <section className={styles.section}>
         <div className={styles.container}>
           <div className={styles.firstLine}>
             <div className={styles.horizontalLine}></div>
-            <div className={styles.salute}>hi, my name is</div>
+            <div className={styles.salute}>{welcome.salute[language]}</div>
           </div>
           <div className={styles.secondLine}>
             <div className={styles.salute}>
@@ -18,7 +20,7 @@ export default function Welcome() {
             <div className={styles.horizontalLine}></div>
           </div>
           <div className={styles.thirdLine}>
-            full stack web developer based in argentina
+            {welcome.description[language]}
           </div>
         </div>
       </section>

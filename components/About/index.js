@@ -1,11 +1,16 @@
+"use client";
 import styles from "./about.module.css";
 import Skills from "./skills";
 import { skills } from "@/utils/data";
+import { useSelector } from "react-redux";
+import { about } from "@/utils/data";
 
 export default function About() {
+  const language = useSelector((state) => state.languageReducer.value.language);
+
   return (
     <div className={styles.container}>
-      <div className={styles.tag}>about me</div>
+      <div className={styles.tag}>{about.tag[language]}</div>
       <div className={styles.firstContainer}>
         <div className={styles.secondContainer}></div>
       </div>
@@ -17,20 +22,11 @@ export default function About() {
         </div>
         <div className={styles.about}>
           <div className={styles.description}>
-            <span>Full Stack Web Developer</span> con experiencia trabajando con
-            React, Redux, NodeJs, Express, SQL entre otras tecnologías. <br />
+            <span>Full Stack Web Developer</span> {about.first[language]} <br />
             <br />
-            Actualmente me encuentro en aprendizaje continuo, desarrollando
-            proyectos particulares que me permitan afianzar lo aprendido y
-            ampliar mis conocimientos. <br />
+            {about.second[language]} <br />
             <br />
-            Soy una persona sociable y proactiva que trabaja en equipo. Acepto
-            desafíos y me caracterizo en resolver problemas. Estas habilidades
-            las adquirí durante mi experiencia laboral previa, donde trabajé en
-            el sector de la construcción como Jefe de Obra. Ejecuté las obras en
-            tiempo y forma, lideré equipos de arquitectos y administrativos como
-            así también el plantel de obra y subcontratistas para la ejecución
-            de todas las tareas.
+            {about.third[language]}
           </div>
           <div className={styles.skills}>
             {skills.map((skill) => {

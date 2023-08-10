@@ -52,10 +52,10 @@
     justify-content: center;
     align-items: center;
     top: 20%;
-    left: 60%;
+    right: 15%;
     z-index: 1;
     font-size: 45px;
-    min-width: 265px ;
+    min-width: 200px ;
     text-transform: lowercase;
     letter-spacing: 10px;
     color: white;
@@ -122,8 +122,8 @@
         background-position: 140% 40%;
     }
     .container .tag{
-        top: 15%;
-        right: 0%;
+        top: 13%;
+        right: 18%;
     }
     
     .container .firstContainer{
@@ -156,7 +156,7 @@
     }
     .container .tag{
         top: 10%;
-        right: 0%;
+        right: 20%;
     }
     .container .content{
         margin-top: 250px;
@@ -180,7 +180,7 @@
 
     .container .tag{
         top: 15%;
-        left:50%;
+        right:20%;
         font-size: 25px;
         letter-spacing: 7px;
     }
@@ -202,7 +202,7 @@
   }
 
 
-  @media screen and (max-width:450px) {
+  @media screen and (max-width:470px) {
     .container{
         background-image: none;
     }
@@ -215,9 +215,10 @@
 
     .container .tag{
         top: 15%;
-        left:40%;
+        right:5%;
         font-size: 25px;
         letter-spacing: 3px;
+        min-width: 150px;
 
     }
 

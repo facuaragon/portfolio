@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import styles from "./form.module.css";
 import { validations } from "./validateForm";
 import localFont from "next/font/local";
-// import createMail from "@/utils/nodemailer";
-
 import { close, success, error } from "@/redux/features/snackbar-slice";
 import { useDispatch, useSelector } from "react-redux";
+import { form as formNames } from "@/utils/data";
 
 const simplon = localFont({
   src: [
@@ -30,6 +29,8 @@ const simplon = localFont({
 export default function Form() {
   const dispatch = useDispatch();
   const message = useSelector((state) => state.snackbarReducer.value.message);
+  const language = useSelector((state) => state.languageReducer.value.language);
+
   const color = useSelector((state) => state.snackbarReducer.value.color);
   const [form, setForm] = useState({
     firstName: "",
@@ -85,14 +86,6 @@ export default function Form() {
       error.phone === "" &&
       error.message === ""
     ) {
-      setForm({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-
       try {
         const res = await fetch("api/contact", {
           method: "POST",
@@ -116,15 +109,23 @@ export default function Form() {
           closeMessage();
         }, 3000);
       }
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     }
   };
   return (
     <>
       <form className={styles.form}>
-        <div className={styles.tag}>contact me</div>
+        <div className={styles.tag}>{formNames.title[language]}</div>
         <div className={styles.subGroup}>
           <label>
-            First Name <span className={styles.required}>*</span>
+            {formNames.firstName[language]}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="firstName"
@@ -135,7 +136,8 @@ export default function Form() {
         </div>
         <div className={styles.subGroup}>
           <label>
-            Last Name <span className={styles.required}>*</span>
+            {formNames.lastName[language]}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input
             name="lastName"
@@ -147,14 +149,16 @@ export default function Form() {
 
         <div className={styles.subGroup}>
           <label id="email">
-            E-mail <span className={styles.required}>*</span>
+            {formNames.email[language]}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input name="email" value={form.email} onChange={handleChange} />
           <div className={styles.error}>{errors.email}</div>
         </div>
         <div className={styles.subGroup}>
           <label id="phone">
-            Phone <span className={styles.required}>*</span>
+            {formNames.phone[language]}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <input name="phone" value={form.phone} onChange={handleChange} />
           <div className={styles.error}>{errors.phone}</div>
@@ -162,7 +166,8 @@ export default function Form() {
 
         <div className={styles.subGroup}>
           <label id="message">
-            Message <span className={styles.required}>*</span>
+            {formNames.message[language]}{" "}
+            <span className={styles.required}>*</span>
           </label>
           <textarea
             name="message"
@@ -175,7 +180,7 @@ export default function Form() {
         <p style={{ color: color }}>{message ? message : "\u00A0"}</p>
 
         <div className={styles.button} onClick={handleSubmit}>
-          Submit
+          {formNames.button[language]}
         </div>
       </form>
     </>
