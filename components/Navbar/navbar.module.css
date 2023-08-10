@@ -5,10 +5,10 @@
   width: 100%;
   background-color: transparent;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 85px;
-  padding: 5px 10%;
+  padding: 5px 5%;
   color: #fff;
   background: none;
 }
@@ -100,28 +100,54 @@
     transition: all 0.3s ease 0s;
 }
 
-.header .menu .menuButton{
+.header .order .menu .menuButton{
   margin-left: 20px;
   font-weight: 700;
   color: #1b3039;
-  padding: 2px 25px;
+  padding: 4px 15px 1px;
   background: #eceff1;
   border: none;
-  border-radius: 50px;
+
   cursor: pointer;
   transition: all 0.3s ease 0s;
   display: flex;
   align-items: center;
 }
 .header .btn button:hover,
-
-.header .menu .menuButton:hover{
-    background-color: #e2f1f8;
+.header .order .menu .menuButton:hover{
+    background-color: #000;
     color: #ffbc0e;
     transform: scale(1.1);
 }
 
-.menu{
+.header .order{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .order .languages{
+  margin-left: 15px;
+}
+.header .order .languages .esLanguage,
+.header .order .languages .enLanguage{
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  padding: 2px 5px;
+  text-transform: uppercase;
+
+}
+
+.header .order .languages .esLanguage:hover,
+.header .order .languages .enLanguage:hover{
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}
+/* .header .order .languages .esLanguage{
+ margin-bottom: 2px;
+} */
+
+.header .order .menu .menuButton{
   display:none
 }
 @media screen and (max-width:992px) {
@@ -131,14 +157,14 @@
   }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:700px) {
   .navLinks, .btn{
     display: none
   }
   .header .navLinks{
     display: none;
   }
-  .menu {
+  .header .order .menu .menuButton {
     display: inherit;
   }
 }

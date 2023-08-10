@@ -6,6 +6,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import ArrowNext from "../icons/ArrowNext";
 import ArrowPrev from "../icons/ArrowPrev";
 import styles from "./projects.module.css";
+import { useSelector } from "react-redux";
 
 export default function Projects() {
   const projects = [1, 2, 3, 4, 5, 6];
@@ -16,6 +17,7 @@ export default function Projects() {
   const [transformX, setTransformX] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalProject, setModalProject] = useState();
+  const language = useSelector((state) => state.languageReducer.value.language);
 
   useEffect(() => {
     const projectsContent = document.getElementById("projectsContent");
@@ -63,7 +65,9 @@ export default function Projects() {
       <div className={styles.container}>
         <div className={styles.firstContainer}></div>
         <div className={styles.secondContainer}></div>
-        <div className={styles.tag}> projects</div>
+        <div className={styles.tag}>
+          {language == "en" ? "projects" : "proyectos"}
+        </div>
         <div className={styles.arrowLeft}>
           <div className={styles.arrow} onClick={handleTranslatePrev}>
             <ArrowPrev

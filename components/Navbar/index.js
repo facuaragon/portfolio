@@ -108,7 +108,7 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-        <div>
+        <div className={styles.order}>
           <a onClick={toggleNav} className={styles.menu} href="">
             <button className={styles.menuButton}>
               <MenuIcon width={25} height={25} fill="currentColor" />
@@ -116,14 +116,14 @@ export default function Navbar() {
           </a>
           <div className={styles.languages}>
             <div
-              className={styles.language}
+              className={styles.esLanguage}
               style={language === "es" ? { fontWeight: 900 } : {}}
               onClick={setSpanish}
             >
               ES
             </div>
             <div
-              className={styles.language}
+              className={styles.enLanguage}
               style={language === "en" ? { fontWeight: 900 } : {}}
               onClick={setEnglish}
             >

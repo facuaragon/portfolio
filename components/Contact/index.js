@@ -7,12 +7,21 @@ import Instagram from "../icons/Instagram";
 import Twitter from "../icons/Twitter";
 import CV from "../icons/CV";
 import CV2 from "../icons/CV2";
+import { useSelector } from "react-redux";
 
 export default function Contact() {
+  const language = useSelector((state) => state.languageReducer.value.language);
+
   const handleDownload = () => {
-    const pdfFileName = "CV-Facundo-Aragon.pdf"; // Replace with your actual PDF file name
-    const downloadLink = `../../${pdfFileName}`;
-    window.open(downloadLink, "_blank");
+    if (language === "es") {
+      const pdfFileName = "CV-Facundo-Aragon (Español).pdf"; // Replace with your actual PDF file name
+      const downloadLink = `../../${pdfFileName}`;
+      window.open(downloadLink, "_blank");
+    } else {
+      const pdfFileName = "CV-Facundo-Aragon (English).pdf"; // Replace with your actual PDF file name
+      const downloadLink = `../../${pdfFileName}`;
+      window.open(downloadLink, "_blank");
+    }
   };
   return (
     <>

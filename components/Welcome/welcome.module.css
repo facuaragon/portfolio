@@ -1,9 +1,10 @@
 .section{
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     color:#ffffff;
     font-weight: 700;
 }
@@ -11,7 +12,8 @@
 .section .container{
     display: flex;
     flex-direction: column;
-    margin: 0 0;
+    padding-left: 400px;
+    padding-right: 400px;
     padding-top: 10px;
     padding-bottom: 30px;
     backdrop-filter: blur(2px);

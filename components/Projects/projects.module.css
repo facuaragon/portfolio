@@ -136,7 +136,8 @@
     .container .tag{
         position: absolute;
         top: 250px;
-        left: 100px;
+        left: 50%;
+        transform: translate(-50%,0);
         text-transform: lowercase;
         color: #fff;
         background-color: #000;
