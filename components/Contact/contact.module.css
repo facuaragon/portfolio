@@ -101,6 +101,27 @@
     scale: 1.3;
 }
 
+.section .background .secondCover .borderRight .footer .footerLeft a{
+ text-decoration: none;
+ color: #000;
+ position: relative;
+
+}
+
+.section .background .secondCover .borderRight .footer .footerLeft p{
+    position: absolute;
+    
+    text-align: right;
+    opacity:0
+   
+}
+
+.section .background .secondCover .borderRight .footer .footerLeft a:hover p{
+    opacity: 1;
+    min-width: 200px;
+    transform: translate(-210px,-25px);
+}
+
 
 
 @media screen and (max-width:1000px){

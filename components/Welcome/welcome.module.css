@@ -5,14 +5,16 @@
     flex-direction: column;
     justify-content: flex-end;
     color:#ffffff;
-    
+    font-weight: 700;
 }
 
 .section .container{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin: 0 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    backdrop-filter: blur(2px);
 }
 
 .section .container .firstLine{   

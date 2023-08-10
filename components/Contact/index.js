@@ -6,6 +6,7 @@ import LinkedIn from "../icons/LinkedIn";
 import Instagram from "../icons/Instagram";
 import Twitter from "../icons/Twitter";
 import CV from "../icons/CV";
+import CV2 from "../icons/CV2";
 
 export default function Contact() {
   const handleDownload = () => {
@@ -31,18 +32,23 @@ export default function Contact() {
                 <div className={styles.footerLeft}>
                   <a href="https://github.com/facuaragon">
                     <GitHubMarkWhite width={20} height={20} fill={"#000000"} />
+                    <p>GitHub</p>
                   </a>
                   <a href="https://www.linkedin.com/in/facundo-aragon-00919459/">
                     <LinkedIn width={20} height={20} fill={"#000000"} />
+                    <p>LinkedIn</p>
                   </a>
                   <a href="https://www.instagram.com/facuaragon/">
                     <Instagram width={20} height={20} fill={"#000000"} />
+                    <p>Instagram</p>
                   </a>
                   <a href="https://twitter.com/facundoaragon">
                     <Twitter width={20} height={20} fill={"#000000"} />
+                    <p>X</p>
                   </a>
                   <a onClick={handleDownload} className={styles.cv}>
-                    <CV width={20} height={20} fill={"#000000"} />
+                    <CV2 width={20} height={20} fill={"#000000"} />
+                    <p>CV / Resume</p>
                   </a>
                 </div>
                 <div className={styles.footerRight}></div>

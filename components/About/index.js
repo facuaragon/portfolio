@@ -1,18 +1,8 @@
 import styles from "./about.module.css";
 import Skills from "./skills";
+import { skills } from "@/utils/data";
 
 export default function About() {
-  let skills = [
-    { name: "JavaScript", knowledge: 90 },
-    { name: "HTML / CSS", knowledge: 90 },
-    { name: "React", knowledge: 90 },
-    { name: "PostgreSQL", knowledge: 80 },
-    { name: "Node.js", knowledge: 80 },
-    { name: "Express.js", knowledge: 80 },
-    { name: "Next.js", knowledge: 70 },
-    { name: "MongoDB", knowledge: 50 },
-    { name: "TypeScript", knowledge: 20 },
-  ];
   return (
     <div className={styles.container}>
       <div className={styles.tag}>about me</div>
