@@ -119,20 +119,7 @@
 
 
 @media screen and (max-width:992px) {
-    .container .tag{
-        position: absolute;
-        top: 250px;
-        left: 50%;
-        transform: translate(-50%,0);
-        text-transform: lowercase;
-        color: #fff;
-        background-color: #000;
-        font-size: 30px;
-        letter-spacing: 10px;
-        padding-left: 5px;
-        padding-bottom: 10px;
-        z-index: 1;
-    }
+    
 }
 
 @media screen and (max-width:700px) {
