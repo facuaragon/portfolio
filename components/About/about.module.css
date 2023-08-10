@@ -2,6 +2,7 @@
     display: flex;
     min-width: 100%;
     min-height: 100vh;
+    height: fit-content;
     background-image: url('../../public/aboutBackground.jpeg');
     background-repeat: no-repeat;
     background-size:45%;
@@ -14,7 +15,7 @@
 
 .container .firstContainer{
     min-width:80%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #fff;
   transform-origin: top right;
   transform: skew(-15deg);
@@ -23,7 +24,7 @@
 
 .container .firstContainer .secondContainer{
     min-width:90%;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 50px;
     margin-right: 50px;
     background-color: #fff;
@@ -39,7 +40,6 @@
     left: 0;
     min-width: 60%;
     min-height: 100vh;
-    max-height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -179,10 +179,11 @@
     }
 
     .container .tag{
-        top: 15%;
+        top: 12%;
         right:20%;
         font-size: 25px;
         letter-spacing: 7px;
+        padding-bottom: 5px;
     }
 
     .container .content{
@@ -214,11 +215,12 @@
     }
 
     .container .tag{
-        top: 15%;
+        top: 12%;
         right:5%;
         font-size: 25px;
         letter-spacing: 3px;
         min-width: 150px;
+        padding-bottom: 5px;
 
     }
 

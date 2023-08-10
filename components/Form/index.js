@@ -1,48 +1,34 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./form.module.css";
-import { validations } from "./validateForm";
 import localFont from "next/font/local";
-import { close, success, error } from "@/redux/features/snackbar-slice";
+import {
+  close,
+  sending,
+  enviando,
+  success,
+  exitoso,
+  error,
+  errorEs,
+} from "@/redux/features/snackbar-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { form as formNames } from "@/utils/data";
+import { formErrors } from "@/utils/data";
 
-const simplon = localFont({
-  src: [
-    {
-      path: "../Fonts/SimplonMono-Bold.woff2",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../Fonts/SimplonMono-Medium.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../Fonts/SimplonNorm-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-});
 export default function Form() {
   const dispatch = useDispatch();
-  const message = useSelector((state) => state.snackbarReducer.value.message);
   const language = useSelector((state) => state.languageReducer.value.language);
-
+  const message = useSelector((state) => state.snackbarReducer.value.message);
   const color = useSelector((state) => state.snackbarReducer.value.color);
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
     message: "",
   });
 
   const [errors, setErrors] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
     message: "",
@@ -50,11 +36,38 @@ export default function Form() {
 
   useEffect(() => {}, [errors]);
 
-  const validateForm = () => {
-    const errors = validations(form);
-    setErrors(errors);
+  const validations = (form) => {
+    const errors = {};
+    if (!form.name) {
+      errors.name = formErrors.name[language];
+    } else {
+      errors.name = "";
+    }
+    if (!form.email) {
+      errors.email = formErrors.email.required[language];
+    } else if (
+      !/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        form.email
+      )
+    ) {
+      errors.email = formErrors.email.format[language];
+    } else {
+      errors.email = "";
+    }
+    if (!form.phone) {
+      errors.phone = formErrors.phone.required[language];
+    } else if (!/^[0-9]*$/.test(form.phone)) {
+      errors.phone = formErrors.phone.format[language];
+    } else {
+      errors.phone = "";
+    }
+    if (!form.message) {
+      errors.message = formErrors.message[language];
+    } else {
+      errors.message = "";
+    }
+    return errors;
   };
-
   const handleChange = (e) => {
     const property = e.target.name;
     const value = e.target.value;
@@ -63,12 +76,14 @@ export default function Form() {
       [property]: value,
     });
   };
-
+  const onSending = () => {
+    language === "en" ? dispatch(sending()) : dispatch(enviando());
+  };
   const onSuccess = () => {
-    dispatch(success());
+    language === "en" ? dispatch(success()) : dispatch(exitoso());
   };
   const onError = () => {
-    dispatch(error());
+    language === "en" ? dispatch(error()) : dispatch(errorEs());
   };
 
   const closeMessage = () => {
@@ -80,13 +95,13 @@ export default function Form() {
     const error = validations(form);
     setErrors(error);
     if (
-      error.lastName === "" &&
-      error.firstName === "" &&
+      error.name === "" &&
       error.email === "" &&
       error.phone === "" &&
       error.message === ""
     ) {
       try {
+        onSending();
         const res = await fetch("api/contact", {
           method: "POST",
           headers: {
@@ -110,8 +125,7 @@ export default function Form() {
         }, 3000);
       }
       setForm({
-        firstName: "",
-        lastName: "",
+        name: "",
         email: "",
         phone: "",
         message: "",
@@ -124,29 +138,12 @@ export default function Form() {
         <div className={styles.tag}>{formNames.title[language]}</div>
         <div className={styles.subGroup}>
           <label>
-            {formNames.firstName[language]}{" "}
+            {formNames.name[language]}{" "}
             <span className={styles.required}>*</span>
           </label>
-          <input
-            name="firstName"
-            value={form.firstName}
-            onChange={handleChange}
-          />
-          <div className={styles.error}>{errors.firstName}</div>
+          <input name="name" value={form.name} onChange={handleChange} />
+          <div className={styles.error}>{errors.name}</div>
         </div>
-        <div className={styles.subGroup}>
-          <label>
-            {formNames.lastName[language]}{" "}
-            <span className={styles.required}>*</span>
-          </label>
-          <input
-            name="lastName"
-            value={form.lastName}
-            onChange={handleChange}
-          />
-          <div className={styles.error}>{errors.lastName}</div>
-        </div>
-
         <div className={styles.subGroup}>
           <label id="email">
             {formNames.email[language]}{" "}

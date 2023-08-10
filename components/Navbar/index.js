@@ -116,18 +116,18 @@ export default function Navbar() {
           </a>
           <div className={styles.languages}>
             <div
-              className={styles.esLanguage}
-              style={language === "es" ? { fontWeight: 900 } : {}}
-              onClick={setSpanish}
-            >
-              ES
-            </div>
-            <div
               className={styles.enLanguage}
               style={language === "en" ? { fontWeight: 900 } : {}}
               onClick={setEnglish}
             >
               EN
+            </div>
+            <div
+              className={styles.esLanguage}
+              style={language === "es" ? { fontWeight: 900 } : {}}
+              onClick={setSpanish}
+            >
+              ES
             </div>
           </div>
         </div>

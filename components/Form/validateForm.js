@@ -1,35 +1,34 @@
+"use client";
+
+import { formErrors } from "@/utils/data";
+
 export const validations = (form) => {
   const errors = {};
-  if (!form.firstName) {
-    errors.firstName = "Required";
+  if (!form.name) {
+    errors.name = formErrors.name[language];
   } else {
-    errors.firstName = "";
-  }
-  if (!form.lastName) {
-    errors.lastName = "Required";
-  } else {
-    errors.lastName = "";
+    errors.name = "";
   }
   if (!form.email) {
-    errors.email = "Required";
+    errors.email = formErrors.email.required[language];
   } else if (
     !/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
       form.email
     )
   ) {
-    errors.email = "E-mail not valid";
+    errors.email = formErrors.email.format[language];
   } else {
     errors.email = "";
   }
   if (!form.phone) {
-    errors.phone = "Required";
+    errors.phone = formErrors.phone.required[language];
   } else if (!/^[0-9]*$/.test(form.phone)) {
-    errors.phone = "Numbers only";
+    errors.phone = formErrors.phone.format[language];
   } else {
     errors.phone = "";
   }
   if (!form.message) {
-    errors.message = "Required";
+    errors.message = formErrors.message[language];
   } else {
     errors.message = "";
   }

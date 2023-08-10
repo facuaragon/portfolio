@@ -14,10 +14,34 @@ export const snackbar = createSlice({
     close: () => {
       return initialState;
     },
+    sending: (state) => {
+      return {
+        value: {
+          message: "Sending...",
+          color: "orange",
+        },
+      };
+    },
+    enviando: (state) => {
+      return {
+        value: {
+          message: "Enviando...",
+          color: "orange",
+        },
+      };
+    },
     success: (state) => {
       return {
         value: {
           message: "Message sent!",
+          color: "green",
+        },
+      };
+    },
+    exitoso: (state) => {
+      return {
+        value: {
+          message: "¡Mensaje enviado!",
           color: "green",
         },
       };
@@ -31,8 +55,17 @@ export const snackbar = createSlice({
         },
       };
     },
+    errorEs: (state) => {
+      return {
+        value: {
+          message: "Hubo un problema al enviar el mensaje, intente nuevamente",
+          color: "red",
+        },
+      };
+    },
   },
 });
 
-export const { close, success, error } = snackbar.actions;
+export const { close, sending, enviando, success, exitoso, error, errorEs } =
+  snackbar.actions;
 export default snackbar.reducer;

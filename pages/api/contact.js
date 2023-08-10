@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 export default async (req, res) => {
-  const { firstName, lastName, email, phone, message } = req.body;
+  const { name, email, phone, message } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -16,7 +16,7 @@ export default async (req, res) => {
     await transporter.sendMail({
       from: process.env.SMTP_EMAIL,
       to: "facundo_aragon@hotmail.com",
-      subject: `Contact from Personal Porfolio ${firstName} ${lastName}`,
+      subject: `${name} te ha contactado desde tu Portfolio Personal`,
       html: `
       <html>
       <head>
@@ -49,7 +49,7 @@ export default async (req, res) => {
             padding: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color:  rgb(48, 162, 238);
+            background-color:  #ccc;
           }
           .datos {
               max-width: 600px;
@@ -62,7 +62,7 @@ export default async (req, res) => {
           }
           .titulo {
               font-family: Helvetica, sans-serif;
-              color:white
+              color:#000
           }
 
         </style>
@@ -72,9 +72,9 @@ export default async (req, res) => {
           <div class="banner">
               <h1 class="titulo">PORTFOLIO PERSONAL</h1>
           </div>
-          <p>First and Last Name: ${firstName} ${lastName}</p>
+          <p>Full Name: ${name}</p>
           <p>Email: ${email}</p>
-          <p>Phone number: ${phone}</p>
+          <p>Phone: ${phone}</p>
           <p>Message:</p>
           <div class="datos">
               <p class="message">${message}</p>

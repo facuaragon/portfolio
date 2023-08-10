@@ -28,7 +28,7 @@ export const welcome = {
 
 export const about = {
   tag: {
-    es: "about",
+    es: "acerca de mi",
     en: "about",
   },
   first: {
@@ -62,13 +62,9 @@ export const form = {
     es: "Contáctame",
     en: "Contact Me",
   },
-  firstName: {
-    es: "Nombre",
-    en: "First Name",
-  },
-  lastName: {
-    es: "Apellido",
-    en: "Last Name",
+  name: {
+    es: "Nombre Completo",
+    en: "Full Name",
   },
   email: {
     es: "Correo Electrónico",
@@ -85,5 +81,36 @@ export const form = {
   button: {
     es: "Enviar",
     en: "Submit",
+  },
+};
+
+export const formErrors = {
+  name: {
+    es: "Requerido",
+    en: "Required",
+  },
+  email: {
+    required: {
+      es: "Requerido",
+      en: "Required",
+    },
+    format: {
+      es: "Correo invalido",
+      en: "E-mail not valid",
+    },
+  },
+  phone: {
+    required: {
+      es: "Requerido",
+      en: "Required",
+    },
+    format: {
+      es: "Solo números",
+      en: "Numbers only",
+    },
+  },
+  message: {
+    es: "Requerido",
+    en: "Required",
   },
 };
