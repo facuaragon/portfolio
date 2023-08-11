@@ -39,19 +39,25 @@ export default function Contact() {
               <div className={styles.boxes}></div>
               <div className={styles.footer}>
                 <div className={styles.footerLeft}>
-                  <a href="https://github.com/facuaragon">
+                  <a href="https://github.com/facuaragon" target="_blank">
                     <GitHubMarkWhite width={20} height={20} fill={"#000000"} />
                     <p>GitHub</p>
                   </a>
-                  <a href="https://www.linkedin.com/in/facundo-aragon-00919459/">
+                  <a
+                    href="https://www.linkedin.com/in/facundo-aragon-00919459/"
+                    target="_blank"
+                  >
                     <LinkedIn width={20} height={20} fill={"#000000"} />
                     <p>LinkedIn</p>
                   </a>
-                  <a href="https://www.instagram.com/facuaragon/">
+                  <a
+                    href="https://www.instagram.com/facuaragon/"
+                    target="_blank"
+                  >
                     <Instagram width={20} height={20} fill={"#000000"} />
                     <p>Instagram</p>
                   </a>
-                  <a href="https://twitter.com/facundoaragon">
+                  <a href="https://twitter.com/facundoaragon" target="_blank">
                     <Twitter width={20} height={20} fill={"#000000"} />
                     <p>X</p>
                   </a>

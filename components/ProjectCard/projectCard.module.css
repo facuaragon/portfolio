@@ -24,6 +24,12 @@
     margin-top: 20px;
     margin-bottom: 20px;
  }
+ .container .type{
+   max-width: 280px;
+   white-space: pre-line;
+   text-align: center;
+   margin-bottom: 10px;
+}
 
  .container .description{
     max-width: 280px;

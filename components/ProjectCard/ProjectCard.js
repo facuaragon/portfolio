@@ -11,6 +11,7 @@ export default function ProjectCard({ project }) {
       <div className={styles.container}>
         <div className={styles.icon}>{project.icon}</div>
         <div className={styles.name}>{project.title}</div>
+        <div className={styles.type}>{project.type[language]}</div>
         <div className={styles.description}>
           {project.shortDescription[language]}
         </div>
