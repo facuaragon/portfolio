@@ -1,3 +1,8 @@
+import ConsumedicLogo from "@/components/icons/projectLogos/ConsumedicLogo";
+import DogsLogo from "@/components/icons/projectLogos/DogsLogo";
+import DevterLogo from "@/components/icons/projectLogos/DevterLogo";
+import PortfolioLogo from "@/components/icons/projectLogos/PortfolioLogo";
+
 export const navbarMenu = {
   options: {
     about: {
@@ -117,6 +122,7 @@ export const formErrors = {
 
 export const projects = [
   {
+    icon: <ConsumedicLogo width={40} height={40} fill={"#000"} />,
     title: "consumedic",
     shortDescription: {
       en: "Final Group Project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows patients to connect with doctors through online appointment scheduling",
@@ -138,6 +144,7 @@ export const projects = [
       "Sequelize",
       "PostgreSQL",
       "Cloudinary",
+      "Nodemailer",
       "Mercado Pago",
       "HTML",
       "CSS",
@@ -145,14 +152,15 @@ export const projects = [
     video: "consumedic.mp4",
   },
   {
+    icon: <DogsLogo width={40} height={40} fill={"#000"} />,
     title: "dogs",
     shortDescription: {
-      en: "Individual project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows displaying different dog breeds",
-      es: "Proyecto individual del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API",
+      en: "Individual Project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows displaying different dog breeds",
+      es: "Proyecto Individual del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API",
     },
     description: {
-      en: "Individual project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows displaying different dog breeds obtained from an API. The project includes combined filters, pagination, and the ability to create dog breeds through a controlled form. Temperament data and new breeds are stored in a database.",
-      es: "Proyecto individual del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API.\nEl proyecto cuenta con filtros combinados, paginación y permite crear razas de perro mediante un formulario controlado.\nLos datos de temperamentos y nuevas razas se almacenan en una base de datos",
+      en: "Individual Project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows displaying different dog breeds obtained from an API. The project includes combined filters, pagination, and the ability to create dog breeds through a controlled form. Temperament data and new breeds are stored in a database.",
+      es: "Proyecto Individual del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API.\nEl proyecto cuenta con filtros combinados, paginación y permite crear razas de perro mediante un formulario controlado.\nLos datos de temperamentos y nuevas razas se almacenan en una base de datos",
     },
     repository: "https://github.com/facuaragon/Dogs-Front",
     deploy: "dogs-front-facuaragon.vercel.app/",
@@ -167,15 +175,17 @@ export const projects = [
       "HTML",
       "CSS",
     ],
+    video: "dogs.mp4",
   },
   {
+    icon: <DevterLogo width={40} height={40} fill={"#000"} />,
     title: "devter",
     shortDescription: {
-      en: "Personal project consisting of a Twitter clone for developers",
-      es: "Proyecto Personal que consiste en un clon de twitter para desarrolladores",
+      en: "Personal Project\n\nWeb application consisting of a Twitter clone for developers",
+      es: "Proyecto Personal\n\nAplicación que consiste en un clon de twitter para desarrolladores",
     },
     description: {
-      en: "Personal project consisting of a Twitter clone for developers\n\nDevelopment of a web application using Firebase Auth, Realtime Database, Firestore Database, and Storage, with GitHub login. It allows users to create 'devits' (tweets) and upload images.",
+      en: "Personal Project consisting of a Twitter clone for developers\n\nDevelopment of a web application using Firebase Auth, Realtime Database, Firestore Database, and Storage, with GitHub login. It allows users to create 'devits' (tweets) and upload images.",
       es: "Proyecto Personal que consiste en un clon de twitter para desarrolladores\n\nDesarrollo de una aplicación web con Firebase Auth, Realtime Database, Firestore Database, Storage, con login de GitHub. Permite crear devits (tweets) y subir imágenes",
     },
     repository: "https://github.com/facuaragon/devter",
@@ -191,5 +201,22 @@ export const projects = [
       "HTML",
       "CSS",
     ],
+    video: "devter.mp4",
+  },
+  {
+    icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
+    title: "portfolio",
+    shortDescription: {
+      en: "Personal Portfolio\n\nA website showcasing my profile, completed projects, contact form, social media links, and curriculum vitae",
+      es: "Portfolio Personal\n\nPagina web que muestra mi perfil, proyectos realizados, formulario de contacto y links de redes sociales y curriculum vitae",
+    },
+    description: {
+      en: "Personal Portfolio\n\nA website showcasing my profile, completed projects, contact form, social media links, and curriculum vitae",
+      es: "Portfolio Personal\n\nPagina web que muestra mi perfil, proyectos realizados, formulario de contacto y links de redes sociales y curriculum vitae",
+    },
+    repository: "https://github.com/facuaragon/portfolio",
+    deploy: "https://facundo-aragon.vercel.app/",
+    techs: ["JavaScript", "Next.js", "React", "HTML", "CSS", "Nodemailer"],
+    video: "devter.mp4",
   },
 ];

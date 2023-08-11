@@ -7,16 +7,21 @@
     cursor: pointer;
     transition: all 0.5s ease ;
     background-color: #c2c2c2;
+    position: relative;
 }
  .container:hover{
     scale: 1.05
  }
 
+ .container .icon{
+   margin-top: 15px;
+ }
+
  .container .name{
     text-transform: uppercase;
     font-weight: 900;
-    margin-top: 20px
-    ;
+    font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
  }
 
@@ -24,4 +29,11 @@
     max-width: 280px;
     white-space: pre-line;
     text-align: center;
+ }
+ .container .footer{
+   position: absolute;
+   bottom: 15px;
+   left: 50%;
+   transform: translateX(-50%);
+
  }
