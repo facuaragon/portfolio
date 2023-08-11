@@ -7,9 +7,9 @@ import ArrowNext from "../icons/ArrowNext";
 import ArrowPrev from "../icons/ArrowPrev";
 import styles from "./projects.module.css";
 import { useSelector } from "react-redux";
+import { projects } from "@/utils/data";
 
 export default function Projects() {
-  const projects = [1, 2, 3, 4, 5, 6];
   const count = projects.length - 1;
   const [windowWidth, setWindowWidth] = useState(0);
   const [projectsWidth, setProjectsWidth] = useState(0);
@@ -58,9 +58,7 @@ export default function Projects() {
             setModalProject();
           }}
           project={modalProject}
-        >
-          Project {modalProject}
-        </Modal>
+        />
       )}
       <div className={styles.container}>
         <div className={styles.firstContainer}></div>

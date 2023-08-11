@@ -1,13 +1,16 @@
 .modalWrapper {
-    width: 80vw;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
   }
   
   .modal {
     background: white;
     height:100%;
     width:100%;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   
   .modalOverlay {
@@ -31,5 +34,8 @@
   .modalHeader {
     display: flex;
     justify-content: flex-end;
+    width: calc(100% - 15px);
+    height: calc(100% - 15px);
     font-size: 25px;
+    border: 1px solid #000;
   }

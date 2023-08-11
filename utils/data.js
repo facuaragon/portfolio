@@ -114,3 +114,82 @@ export const formErrors = {
     en: "Required",
   },
 };
+
+export const projects = [
+  {
+    title: "consumedic",
+    shortDescription: {
+      en: "Final Group Project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows patients to connect with doctors through online appointment scheduling",
+      es: "Proyecto Final Grupal del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita conectar pacientes con médicos mediante reserva de turnos online",
+    },
+    description: {
+      en: "Final Group Project from Henry's Full Stack Developer Bootcamp\nComplete development of a web application that allows patients to connect with doctors through online appointment scheduling.\nThe project includes third-party authentication, payment gateway, combined filters, Cloudinary, Local Storage, Reviews, Admin dashboard, Doctor's Profile Dashboard, Patient's Profile Dashboard, Mailing, and logical deletion.\nIn particular, I was responsible for designing the database models, establishing relationships between them, defining server request routes, and providing corresponding responses based on FrontEnd requirements. Later, I integrated Cloudinary into the project to upload, manipulate, and display files in image format. I also developed the code for the doctors' appointment scheduling system, both in the backend and frontend. Finally, I was in charge of the Doctor's Profile panel, where the doctor can access necessary patient information, upload files, and respond to patients.",
+      es: "Proyecto Final Grupal del Bootcamp de Henry Full Stack Developer\nDesarrollo completo de una aplicacion web que permita conectar pacientes con médicos mediante reserva de turnos online.\nEl proyecto cuenta con identificacion de terceros, pasarela de pagos, filtros combinados, Cloudinary, Local Storage, Reviews, dashboard de Admin, Dashboard para el perfil de Médico, Dashboard para el perfil de Paciente, Mailing y borrado lógico.\nEn particular me encargué de la confección de los modelos de la base de datos, la relaciones entre ellos, definir las rutas de peticion del servidor y las correspondientes respuesta según las necesidades del FrontEnd. Posteriormente realicé la incorporacion de Cloudinary al proyecto para poder subir, manipular y mostrar los archivos en formato de imagen. También dearrollé el código correspondiente a la agenda de los médicos tanto en el backend como en el frontend. Finalmente estuve a cargo del panel del Perfil Médico donde el Médico pueda visibilizar la informacion necesaria de sus pacientes, subir archivos y dar respuesta los pacientes.",
+    },
+    repository: "https://github.com/iHoerth/PF-soyhenry",
+    deploy: "https://new-front-silk.vercel.app/",
+    techs: [
+      "JavaScript",
+      "React",
+      "Context",
+      "Material-UI",
+      "Node.js",
+      "Express",
+      "Sequelize",
+      "PostgreSQL",
+      "Cloudinary",
+      "Mercado Pago",
+      "HTML",
+      "CSS",
+    ],
+    video: "consumedic.mp4",
+  },
+  {
+    title: "dogs",
+    shortDescription: {
+      en: "Individual project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows displaying different dog breeds",
+      es: "Proyecto individual del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API",
+    },
+    description: {
+      en: "Individual project from Henry's Full Stack Developer Bootcamp\n\nComplete development of a web application that allows displaying different dog breeds obtained from an API. The project includes combined filters, pagination, and the ability to create dog breeds through a controlled form. Temperament data and new breeds are stored in a database.",
+      es: "Proyecto individual del Bootcamp de Henry Full Stack Developer\n\nDesarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API.\nEl proyecto cuenta con filtros combinados, paginación y permite crear razas de perro mediante un formulario controlado.\nLos datos de temperamentos y nuevas razas se almacenan en una base de datos",
+    },
+    repository: "https://github.com/facuaragon/Dogs-Front",
+    deploy: "dogs-front-facuaragon.vercel.app/",
+    techs: [
+      "JavaScript",
+      "React",
+      "Redux",
+      "Node.js",
+      "Express",
+      "Sequelize",
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    title: "devter",
+    shortDescription: {
+      en: "Personal project consisting of a Twitter clone for developers",
+      es: "Proyecto Personal que consiste en un clon de twitter para desarrolladores",
+    },
+    description: {
+      en: "Personal project consisting of a Twitter clone for developers\n\nDevelopment of a web application using Firebase Auth, Realtime Database, Firestore Database, and Storage, with GitHub login. It allows users to create 'devits' (tweets) and upload images.",
+      es: "Proyecto Personal que consiste en un clon de twitter para desarrolladores\n\nDesarrollo de una aplicación web con Firebase Auth, Realtime Database, Firestore Database, Storage, con login de GitHub. Permite crear devits (tweets) y subir imágenes",
+    },
+    repository: "https://github.com/facuaragon/devter",
+    deploy: "devter-iota.vercel.app",
+    techs: [
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Firebase Auth",
+      "Realtime Database",
+      "Firestore Database",
+      "Storage",
+      "HTML",
+      "CSS",
+    ],
+  },
+];

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import styles from "./modal.module.css";
 
-const Modal = ({ onClose, children, title }) => {
+const Modal = ({ onClose, project }) => {
   const modalWrapperRef = useRef();
   const backDropHandler = useCallback((e) => {
     if (!modalWrapperRef?.current?.contains(e.target)) {
@@ -14,6 +14,7 @@ const Modal = ({ onClose, children, title }) => {
     setTimeout(() => {
       window.addEventListener("click", backDropHandler);
     });
+    console.log(project);
   }, []);
   useEffect(() => {
     return () => window.removeEventListener("click", backDropHandler);
@@ -33,8 +34,8 @@ const Modal = ({ onClose, children, title }) => {
               x
             </a>
           </div>
-          {title && <h1>{title}</h1>}
-          <div className={styles.modalBody}>{children}</div>
+
+          <div className={styles.modalBody}></div>
         </div>
       </div>
     </div>

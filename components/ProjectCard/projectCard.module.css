@@ -11,3 +11,17 @@
  .container:hover{
     scale: 1.05
  }
+
+ .container .name{
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 20px
+    ;
+    margin-bottom: 20px;
+ }
+
+ .container .description{
+    max-width: 280px;
+    white-space: pre-line;
+    text-align: center;
+ }
