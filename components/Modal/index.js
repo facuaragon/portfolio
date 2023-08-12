@@ -89,9 +89,9 @@ const Modal = ({ onClose, project }) => {
               ></div>
               <div className={styles.video}>
                 <video
-                  autoPlay
                   muted
                   controls
+                  poster={`/projects/${project.image}`}
                   style={{ backgroundColor: "#fff" }}
                 >
                   <source src={`/projects/${project.video}`} type="video/mp4" />
