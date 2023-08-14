@@ -99,14 +99,14 @@
     transition: all 0.3s ease 0s;
 }
 
-.header .order a{
+.header .order .cv{
   padding: 2px 5px;;
   margin-bottom: 7px;
   margin-left: 15px;
   transition: all 0.3s ease 0s;
 }
 
-.header .order a:hover{
+.header .order .cv:hover{
   background-color: #000;
   color: #fff;
   transform: scale(1.1);
@@ -130,7 +130,7 @@
 .header .btn button:hover,
 .header .order .menu .menuButton:hover{
     background-color: #000;
-    color: #ffbc0e;
+    color: #fff;
     transform: scale(1.1);
 }
 
@@ -217,7 +217,7 @@
 
 .header .overlay a:hover,
 .header .overlay a:focus{
-  color: #ffbc0e;
+  color: #ffff;
 }
 
 .header .overlay .close{

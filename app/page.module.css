@@ -34,3 +34,9 @@
 .section3{
   background-color: #fff;
 }
+
+@media screen and (max-height:700px) {
+  .section1, .section2, .section3{
+      min-height: 110vh;
+  }
+}

@@ -189,3 +189,13 @@
 
 
 }
+
+@media screen and (max-height:700px) {
+    .section,
+    .section .background,
+    .section .background .firstCover,
+    .section .background .secondCover,
+    .section .background .secondCover .borderRight{
+        min-height: 110vh;
+    }
+}
