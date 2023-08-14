@@ -22,8 +22,8 @@ export const navbarMenu = {
 
 export const welcome = {
   salute: {
-    es: "hola, mi nombre es",
-    en: "hi, my name is",
+    es: "mi nombre es",
+    en: "my name is",
   },
   description: {
     es: "full stack web developer radicado en argentina",
@@ -46,7 +46,7 @@ export const about = {
   },
   third: {
     es: "Soy una persona sociable y proactiva que trabaja en equipo. Acepto desafíos y me caracterizo en resolver problemas. Estas habilidades las adquirí durante mi experiencia laboral previa, donde trabajé en el sector de la construcción como Jefe de Obra. Ejecuté las obras en tiempo y forma, lideré equipos de arquitectos y administrativos como así también el plantel de obra y subcontratistas para la ejecución de todas las tareas.",
-    en: "I am a sociable and proactive person who works well in teams. I embrace challenges and excel at problem-solving. I acquired these skills during my previous work experience, where I worked in the construction sector as a Construction Manager. I completed projects on time, led teams of architects and administrators, as well as the construction team and subcontractors for the execution of all tasks.",
+    en: "I am a sociable and proactive person with a strong background in teamwork. I embrace challenges and excel at problem-solving. I acquired these skills during my previous work experience, where I worked in the construction sector as a Construction Manager. I completed projects on time, led teams of architects and administrators, as well as the construction team and subcontractors for the execution of all tasks.",
   },
 };
 
@@ -164,15 +164,15 @@ export const projects = [
       es: "Proyecto Individual del Bootcamp de Henry Full Stack Developer",
     },
     shortDescription: {
-      en: "Complete development of a web application that allows displaying different dog breeds",
-      es: "Desarrollo completo de una aplicacion web que permita mostrar las distintas razas de perros obtenidas de una API",
+      en: "Complete development of a web application that displays different dog breeds",
+      es: "Desarrollo completo de una aplicacion web que permite mostrar las distintas razas de perros obtenidas de una API",
     },
     description: {
       en: "The project includes combined filters, pagination, and the ability to create dog breeds through a controlled form. Temperament data and new breeds are stored in a database.",
       es: "El proyecto cuenta con filtros combinados, paginación y permite crear razas de perro mediante un formulario controlado.\nLos datos de temperamentos y nuevas razas se almacenan en una base de datos",
     },
     repository: "https://github.com/facuaragon/Dogs-Front",
-    deploy: "dogs-front-facuaragon.vercel.app/",
+    deploy: "https://dogs-front-facuaragon.vercel.app/",
     techs: [
       "JavaScript",
       "React",
@@ -203,7 +203,7 @@ export const projects = [
       es: "Desarrollo de una aplicación web con Firebase Auth, Realtime Database, Firestore Database, Storage, con login de GitHub. Permite crear devits (tweets) y subir imágenes",
     },
     repository: "https://github.com/facuaragon/devter",
-    deploy: "devter-iota.vercel.app",
+    deploy: "https://devter-iota.vercel.app",
     techs: [
       "JavaScript",
       "Next.js",

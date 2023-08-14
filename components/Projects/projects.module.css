@@ -135,9 +135,10 @@
         text-transform: lowercase;
         color: #fff;
         background-color: #000;
-        font-size: 25px;
+        font-size: 35px;
         letter-spacing: 10px;
-        padding-left: 5px;
+        padding-right: 10px;
+        padding-left: 15px;
         padding-bottom: 10px;
         z-index: 1;
     }
@@ -157,10 +158,42 @@
         text-transform: lowercase;
         color: #fff;
         background-color: #000;
-        font-size: 20px;
+        font-size: 30px;
         letter-spacing: 10px;
-        padding-left: 5px;
+        padding-right: 10px;
+        padding-left: 15px;
         padding-bottom: 10px;
         z-index: 1;
     }
 }
+
+
+@media screen and (min-height:1000px) {
+
+    .modal .forms{
+          min-width: 35%;
+          transform: skew(-10deg);
+    
+         
+        }
+        .modal .forms1{
+          min-width: 35%;
+          transform: skew(-10deg) translate(-20px);
+        }
+      
+        .modal .forms2{
+          min-width: 20%;
+         
+        }
+        
+    }
+
+    @media screen and (max-height:650px) {
+        .container .tag{
+
+            top: 220px;
+            left: 50%;
+
+        }
+            
+        }
