@@ -27,7 +27,6 @@
     z-index: 4;
   }
 
- 
   
   .modalBody {
     padding-top: 10px;
@@ -41,8 +40,8 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: calc(100% - 15px);
-    height: calc(100% - 15px);
+    width: 100%;
+    height: 100%;
     position: relative;
     white-space: pre-line;
     overflow: hidden;
@@ -50,24 +49,44 @@
   }
 
   .modal .forms{
-    min-width: 3000px;
-    min-height: 3000px;
+    min-width: 30%;
+    min-height: 100%;
     position: absolute;
+    top:0;
+    left:0;
     background-color: #fff;
-    transform: rotate(15deg) translate(-80%);
+    transform: skew(-15deg);
+    z-index: 1;
+    left:0;
+   
+  }
+  .modal .forms1{
+    min-width: 30%;
+    min-height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #fff;
+    transform: skew(-15deg) translate(-20px);
+    border-right: 1px solid #000;
+    z-index: 1;
+    left:0;
    
   }
 
   .modal .forms2{
-    min-width: 3000px;
-    min-height: 3000px;
+    min-width: 20%;
+    min-height: 100%;
     position: absolute;
-    border: 1px solid #000;
-    transform: rotate(15deg) translate(-81%);
+    top:0;
+    left:0;
+    background-color: #fff;
+    z-index: 0;
+    left:0;
+   
   }
 
-
-  .modalHeader a{
+  .modalHeader .close{
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -79,28 +98,48 @@
     color: #000;
     transition: all 0.3s ease ;
     z-index: 2;
+    backdrop-filter: blur(5px);
   }
 
-  .modalHeader .arrow{
-    min-height: 100%;
+  .modalHeader .arrowNext{
     position: absolute;
     display: flex;
     align-items: center;
-    top: 0;
+    justify-content: center;
+    top: 50%;
     right: 0;
-    margin-top: 50px;
     color: #000;
     transition: all 0.3s ease ;
     z-index: 1;
+    backdrop-filter: blur(5px);
   }
 
-  .modalHeader .arrow:hover{
+  .modalHeader .arrowNext:hover{
     transform: scale(1.2);
     color:#fff;
     background-color: #696969;
   }
 
-  .modalHeader a:hover{
+  .modalHeader .arrowPrev{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 0;
+    color: #000;
+    transition: all 0.3s ease ;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+  }
+
+  .modalHeader .arrowPrev:hover{
+    transform: scale(1.2);
+    color:#fff;
+    background-color: #696969;
+  }
+
+  .modalHeader .close:hover{
     transform: scale(1.2);
     color:#fff;
     background-color: #000;
@@ -111,57 +150,177 @@
     width: 200%;
     display: flex;
     flex-direction: row;
+    transition: all 0.5s ease;
+
+    
 
     
   }
   
   .modalHeader .content .card{
     text-align: start;
-    width: 50%;
-    z-index: 5;
-
-    
+    min-width: 25%;
+    max-width: 25%;
+    z-index: 1;  
   }
   .modalHeader .content .image{
-    width: 50%;
+    min-width: 25%;
     background-position: center;
     background-size:auto;
 
   }
   .modalHeader .content .video{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .modalHeader .content .card .firstLine{
     width: 90%;
     display: flex;
-
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
     align-items: center;
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 900;
+    margin-bottom: 30px;
   }
 
-  .modalHeader .content .card .firstLine .title{
-    margin-left: 15px;
+  .modalHeader .content .card .firstLine .icon{
+    margin-right: 10px;
   }
 
+  .modalHeader .content .card .firstLine .info{
+
+  }
+  .modalHeader .content .card .firstLine .info .title{
+
+  }
+
+  .modalHeader .content .card .firstLine .info .type{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  .modalHeader .content .card .shortDescription{
+    margin: 10px 20px 30px;
+    width: 80%;
+  }
+  .modalHeader .content .technologies{
+    margin: 10px 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+ 
+  }
+
+  .modalHeader .content .technologies div{
+    margin-right: 10px;
+  }
 
   .modalHeader .content video{
-    width: 700px;
-    background-color: transparent !important;
+    width: 80%;
+  }
+  .modalHeader .content .technologies ul{
+    list-style: none;
+    column-count: 2;
+  }
+  .modalHeader .content .technologies ul li{
+    
+  }
+  .modalHeader .content .repository,
+  .modalHeader .content .deploy{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .modalHeader .content .repository a,
+  .modalHeader .content .deploy a{
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+    transition: all 0.3s ease ;
+    padding: 3px;
   }
 
+  .modalHeader .content .repository a:hover,
+  .modalHeader .content .deploy a:hover{
+    color: white;
+    background-color: #000;
+    transform: scale(1.2);
+  }
 
-  /* .modalHeader .content .icon
-  {
-    transform: scale(0.5);
-  } */
-
-  .modalHeader .content .technologies,
-  .modalHeader .content .repository,
+ 
   .modalHeader .content .deploy
   {
     display: flex;
   }
 
 
+  @media screen and (max-width:1000px){
+    .modal .forms{
+      min-width: 33%;
+      transform: skew(-10deg);
+
+     
+    }
+    .modal .forms1{
+      min-width: 33%;
+      transform: skew(-10deg) translate(-20px);
+    }
+  
+    .modal .forms2{
+      min-width: 20%;
+     
+    }
+  }
+  @media screen and (max-width:700px) {
+    .modalHeader .content .card .firstLine .info .title{
+        font-size: 30px;
+    }
+    .modal .forms{
+    display: none;
+
+     
+    }
+    .modal .forms1{
+      display: none;
+    }
+  
+    .modal .forms2{
+      display: none;
+     
+    }
+
+    .modalHeader .content .image{
+      display: none;
+    }
+    .modalHeader .content .card{
+
+      min-width: 50%;
+
+    }
+  }
+
+  @media screen and (min-height:1000px) {
+
+.modal .forms{
+      min-width: 35%;
+      transform: skew(-10deg);
+
+     
+    }
+    .modal .forms1{
+      min-width: 35%;
+      transform: skew(-10deg) translate(-20px);
+    }
+  
+    .modal .forms2{
+      min-width: 20%;
+     
+    }
+    
+}

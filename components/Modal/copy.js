@@ -5,8 +5,6 @@ import ArrowNext from "../icons/ArrowNext";
 import ArrowPrev from "../icons/ArrowPrev";
 import styles from "./modal.module.css";
 import { useSelector } from "react-redux";
-import Deploy from "../icons/Deploy";
-import GitHubMarkWhite from "../icons/GitHubMarkWhite";
 
 const Modal = ({ onClose, project }) => {
   const language = useSelector((state) => state.languageReducer.value.language);
@@ -46,13 +44,13 @@ const Modal = ({ onClose, project }) => {
       <div ref={modalWrapperRef} className={styles.modalWrapper}>
         <div className={styles.modal}>
           <div className={styles.modalHeader}>
-            <a className={styles.close} href="#" onClick={handleCloseClick}>
+            <a href="#" onClick={handleCloseClick}>
               x
             </a>
             <div
               className={styles.arrowPrev}
               onClick={handleTranslatePrev}
-              style={{ display: translate === "0%" ? "none" : "flex" }}
+              style={{ display: translate === "0%" ? "none" : "block" }}
             >
               <ArrowPrev
                 id="projectArrowPrev"
@@ -61,10 +59,11 @@ const Modal = ({ onClose, project }) => {
                 fill={"#000"}
               />
             </div>
+
             <div
               className={styles.arrowNext}
               onClick={handleTranslate}
-              style={{ display: translate === "-50%" ? "none" : "flex" }}
+              style={{ display: translate === "-50%" ? "none" : "block" }}
             >
               <ArrowNext
                 id="projectArrowPrev"
@@ -82,10 +81,6 @@ const Modal = ({ onClose, project }) => {
                 style={{ display: translate === "-50%" ? "none" : "block" }}
               ></div>
               <div
-                className={styles.forms1}
-                style={{ zIndex: translate === "-50%" ? "none" : "block" }}
-              ></div>
-              <div
                 className={styles.forms2}
                 style={{ zIndex: translate === "-50%" ? "none" : "block" }}
               ></div>
@@ -98,34 +93,18 @@ const Modal = ({ onClose, project }) => {
                       fill: "#000",
                     })}
                   </div>
-                  <div className={styles.info}>
-                    <div className={styles.title}>{project.title}</div>
-                    <div className={styles.type}>{project.type[language]}</div>
-                  </div>
+                  <div className={styles.title}>{project.title}</div>
                 </div>
+                <div className={styles.type}>{project.type[language]}</div>
                 <div className={styles.shortDescription}>
                   {project.shortDescription[language]}
                 </div>
                 <div className={styles.technologies}>
-                  <div>Technologies: </div>
-                  <ul>
-                    {project.techs.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
+                  <span>technologies:&nbsp;</span>
+                  {project.techs.join(", ")}
                 </div>
-                <div className={styles.deploy}>
-                  <Deploy width={30} height={30} fill={"#000"} />
-                  <a href={project.deploy} target="_blank">
-                    Deploy
-                  </a>
-                </div>
-                <div className={styles.repository}>
-                  <GitHubMarkWhite width={30} height={30} fill={"#000"} />
-                  <a href={project.repository} target="_blank">
-                    Repository
-                  </a>
-                </div>
+                <div className={styles.repository}>repository</div>
+                <div className={styles.deploy}>deploy</div>
               </div>
               <div
                 className={styles.image}
@@ -142,6 +121,19 @@ const Modal = ({ onClose, project }) => {
                   Tu navegador no admite el elemento <code>video</code>.
                 </video>
               </div>
+
+              {/* <div className={styles.description}>
+                {project.description[language]}
+              </div> */}
+              {/* <video
+                autoPlay
+                muted
+                controls
+                style={{ backgroundColor: "#fff" }}
+              >
+                <source src={`/projects/${project.video}`} type="video/mp4" />
+                Tu navegador no admite el elemento <code>video</code>.
+              </video> */}
             </div>
           </div>
         </div>
