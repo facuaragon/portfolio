@@ -63,7 +63,7 @@ export default function Navbar() {
             offset={navbarHeight}
             duration={800}
           >
-            home
+            Home
           </ScrollLink>
         </div>
         <nav>

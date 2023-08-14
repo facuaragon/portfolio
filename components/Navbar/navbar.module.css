@@ -32,7 +32,6 @@
 .header .logo{
   cursor: pointer;
   margin-right: auto;
-  text-transform: lowercase;
   transition: all 0.3s ease 0s;
   padding: 2px;
   letter-spacing: 5px;
@@ -67,7 +66,7 @@
 .header .navLinks li{
   display: inline-block;
   padding: 0 20px;    
-  text-transform: lowercase;
+
   transition: all 0.3s ease 0s;
   letter-spacing: 5px;
 }

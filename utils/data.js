@@ -6,16 +6,16 @@ import PortfolioLogo from "@/components/icons/projectLogos/PortfolioLogo";
 export const navbarMenu = {
   options: {
     about: {
-      es: "acerca de mi",
-      en: "about",
+      es: "Acerca de mi",
+      en: "About",
     },
     projects: {
-      es: "proyectos",
-      en: "projects",
+      es: "Proyectos",
+      en: "Projects",
     },
     contact: {
-      es: "contáctame",
-      en: "contact me",
+      es: "Contáctame",
+      en: "Contact me",
     },
   },
 };
@@ -37,8 +37,8 @@ export const about = {
     en: "about",
   },
   first: {
-    es: "con experiencia trabajando con React, Redux, NodeJs, Express, SQL entre otras tecnologías.",
-    en: "with experience working with React, Redux, NodeJs, Express, SQL, among other technologies.",
+    es: "con experiencia trabajando con React, Redux, NodeJs, Express, SQL entre otras.",
+    en: "with experience working with React, Redux, NodeJs, Express, SQL, among others.",
   },
   second: {
     es: "Actualmente me encuentro en aprendizaje continuo, desarrollando proyectos particulares que me permitan afianzar lo aprendido y ampliar mis conocimientos.",
