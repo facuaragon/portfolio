@@ -236,7 +236,7 @@ export const projects = [
     repository: "https://github.com/facuaragon/portfolio",
     deploy: "https://facundo-aragon.vercel.app/",
     techs: ["JavaScript", "Next.js", "React", "HTML", "CSS", "Nodemailer"],
-    video: "devter.mp4",
+    video: "portfolio.mp4",
     image: "portfolio.jpeg",
   },
 ];
