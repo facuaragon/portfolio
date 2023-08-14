@@ -7,7 +7,7 @@ export const navbarMenu = {
   options: {
     about: {
       es: "Acerca de mi",
-      en: "About",
+      en: "About me",
     },
     projects: {
       es: "Proyectos",
@@ -22,8 +22,8 @@ export const navbarMenu = {
 
 export const welcome = {
   salute: {
-    es: "mi nombre es",
-    en: "my name is",
+    es: "Hola, mi nombre es",
+    en: "Hi, my name is",
   },
   description: {
     es: "full stack web developer radicado en argentina",
@@ -34,7 +34,7 @@ export const welcome = {
 export const about = {
   tag: {
     es: "acerca de mi",
-    en: "about",
+    en: "about me",
   },
   first: {
     es: "con experiencia trabajando con React, Redux, NodeJs, Express, SQL entre otras.",

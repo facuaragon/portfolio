@@ -47,6 +47,18 @@ export default function Navbar() {
     dispatch(english());
   };
 
+  const handleDownload = () => {
+    if (language === "es") {
+      const pdfFileName = "CV-Facundo-Aragon (Español).pdf"; // Replace with your actual PDF file name
+      const downloadLink = `../../${pdfFileName}`;
+      window.open(downloadLink, "_blank");
+    } else {
+      const pdfFileName = "CV-Facundo-Aragon (English).pdf"; // Replace with your actual PDF file name
+      const downloadLink = `../../${pdfFileName}`;
+      window.open(downloadLink, "_blank");
+    }
+  };
+
   return (
     <>
       <header
@@ -106,6 +118,7 @@ export default function Navbar() {
                 {navbarMenu.options.contact[language]}
               </ScrollLink>
             </li>
+            <div className={styles.down}></div>
           </ul>
         </nav>
         <div className={styles.order}>
@@ -113,6 +126,9 @@ export default function Navbar() {
             <button className={styles.menuButton}>
               <MenuIcon width={25} height={25} fill="currentColor" />
             </button>
+          </a>
+          <a onClick={handleDownload} className={styles.cv}>
+            <p>CV</p>
           </a>
           <div className={styles.languages}>
             <div

@@ -7,7 +7,14 @@ import { about } from "@/utils/data";
 
 export default function About() {
   const language = useSelector((state) => state.languageReducer.value.language);
-
+  const compareFn = (a, b) => {
+    if (a.knowledge < b.knowledge) {
+      return 1;
+    } else if (a.knowledge > b.knowledge) {
+      return -1;
+    }
+    return 0;
+  };
   return (
     <div className={styles.container}>
       <div className={styles.tag}>{about.tag[language]}</div>
@@ -29,7 +36,7 @@ export default function About() {
             {about.third[language]}
           </div>
           <div className={styles.skills}>
-            {skills.map((skill) => {
+            {skills.sort(compareFn).map((skill) => {
               return (
                 <div key={skill.name} className={styles.skill}>
                   <div className={styles.circles}>

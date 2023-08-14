@@ -99,6 +99,21 @@
     transition: all 0.3s ease 0s;
 }
 
+.header .order a{
+  padding: 2px 5px;;
+  margin-bottom: 7px;
+  margin-left: 15px;
+  transition: all 0.3s ease 0s;
+}
+
+.header .order a:hover{
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+
 .header .order .menu .menuButton{
   margin-left: 20px;
   font-weight: 700;
