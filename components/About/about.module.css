@@ -239,6 +239,12 @@
         margin-bottom: 20px;
     }
   }
+
+  @media screen and (max-width:400px) {
+    .container .firstContainer .secondContainer{
+        display: none;
+    }
+  }
   @media screen and (min-height:800px) {
 
     .container .tag{
@@ -247,3 +253,9 @@
 
     
 }
+
+@media screen and (max-height:700px) {
+    .container{
+        min-height: 110vh;
+    }
+  }

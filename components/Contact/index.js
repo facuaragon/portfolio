@@ -34,6 +34,31 @@ export default function Contact() {
             <div className={styles.viewForm}>
               <Form />
             </div>
+            <div className={styles.footerDown}>
+              <a href="https://github.com/facuaragon" target="_blank">
+                <GitHubMarkWhite width={20} height={20} fill={"#000000"} />
+                <p>GitHub</p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/facundo-aragon-00919459/"
+                target="_blank"
+              >
+                <LinkedIn width={20} height={20} fill={"#000000"} />
+                <p>LinkedIn</p>
+              </a>
+              <a href="https://www.instagram.com/facuaragon/" target="_blank">
+                <Instagram width={20} height={20} fill={"#000000"} />
+                <p>Instagram</p>
+              </a>
+              <a href="https://twitter.com/facundoaragon" target="_blank">
+                <Twitter width={20} height={20} fill={"#000000"} />
+                <p>X</p>
+              </a>
+              <a onClick={handleDownload} className={styles.cv}>
+                <CV2 width={20} height={20} fill={"#000000"} />
+                <p>CV/Resume</p>
+              </a>
+            </div>
             <div className={styles.borderRight}>
               <div className={styles.boxes}></div>
               <div className={styles.boxes}></div>
