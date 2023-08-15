@@ -15,14 +15,14 @@
 .form .tag{
     color: #fff;
     background-color: #000;
-    min-width: 480px;
+    min-width: 490px;
     font-size: 40px;
     letter-spacing: 25px;
     padding-left: 35px;
     padding-bottom: 10px;
     position: absolute;
     top:-90px;
-    left: -40px;
+    left: -45px;
     z-index: 1;
 
 
@@ -103,14 +103,16 @@
         margin-top: 195px;
     }
     .form .tag{
-        min-width: 250px;
-        font-size: 25px;
-        letter-spacing: 20px;
-        padding: 0;
+        font-size: 35px;
+        letter-spacing: 10px;
+        padding-right: 10px;
         padding-left: 15px;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
+
+        min-width: 250px;
+
         top: -80px;
-        left: 30px
+        left: 50px
     }
 }
 
@@ -123,14 +125,15 @@
 
     }
     .form .tag{
-        min-width: 250px;
+        
+        width: 300px;
         font-size: 35px;
         letter-spacing: 10px;
         padding: 0;
         padding-left: 15px;
         padding-bottom: 5px;
         top: -80px;
-        left: 10px
+        left: 0px
     }
 }
 

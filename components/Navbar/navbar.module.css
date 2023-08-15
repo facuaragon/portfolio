@@ -193,7 +193,7 @@
   z-index: 3;
   right: 0;
   top: 0;
-  background-color: rgb(151, 151, 151);
+  background-color: #000;
   overflow: hidden;
   transition: all 0.3s ease 0s
 }
@@ -217,7 +217,8 @@
 
 .header .overlay a:hover,
 .header .overlay a:focus{
-  color: #ffff;
+  color: #000;
+  background-color: #fff;
 }
 
 .header .overlay .close{
