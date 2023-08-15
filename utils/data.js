@@ -33,8 +33,8 @@ export const welcome = {
 
 export const about = {
   tag: {
-    es: "acerca de mi",
-    en: "about me",
+    es: "Acerca de mi",
+    en: "About me",
   },
   first: {
     es: "con experiencia trabajando con React, Redux, NodeJs, Express, SQL entre otras.",
@@ -65,7 +65,7 @@ export const skills = [
 export const form = {
   title: {
     es: "Contáctame",
-    en: "Contact Me",
+    en: "Contact me",
   },
   name: {
     es: "Nombre Completo",

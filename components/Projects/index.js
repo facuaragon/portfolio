@@ -64,7 +64,7 @@ export default function Projects() {
         <div className={styles.firstContainer}></div>
         <div className={styles.secondContainer}></div>
         <div className={styles.tag}>
-          {language == "en" ? "projects" : "proyectos"}
+          {language == "en" ? "Projects" : "Proyectos"}
         </div>
         <div className={styles.arrowLeft}>
           <div className={styles.arrow} onClick={handleTranslatePrev}>
