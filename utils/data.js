@@ -57,8 +57,8 @@ export const skills = [
   { name: "PostgreSQL", knowledge: 80 },
   { name: "Node.js", knowledge: 80 },
   { name: "Express.js", knowledge: 80 },
-  { name: "Next.js", knowledge: 70 },
-  { name: "MongoDB", knowledge: 50 },
+  { name: "Next.js", knowledge: 90 },
+  { name: "MongoDB", knowledge: 70 },
   { name: "TypeScript", knowledge: 20 },
 ];
 
@@ -121,6 +121,79 @@ export const formErrors = {
 };
 
 export const projects = [
+  {
+    icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
+    title: "website",
+    type: {
+      en: "Journalist Portfolio",
+      es: "Portfolio para Periodista",
+    },
+    shortDescription: {
+      en: "Website that showcases the work done by journalist Francisco Ferreyra in different sections. It includes an admin panel for the client to manage the displayed data.",
+      es: "Pagina web que muestra los trabajos realizados por el periodista Francisco Ferreyra en diferentes secciones. Contiene ruta de admin para que el cliente pueda administrar los datos mostrados",
+    },
+    description: {
+      en: "Website that showcases the work done by journalist Francisco Ferreyra in different sections. It includes an admin panel for the client to manage the displayed data.",
+      es: "Pagina web que muestra los trabajos realizados por el periodista Francisco Ferreyra en diferentes secciones. Contiene ruta de admin para que el cliente pueda administrar los datos mostrados",
+    },
+    repository: "https://github.com/facuaragon/franferreyra",
+    deploy: "https://soyfranferreyra.vercel.app/",
+    techs: ["Next.js", "MongoDB", "JavaScript", "React", "HTML", "CSS"],
+    video: "soyfranferreyra.mp4",
+    image: "soyfranferreyra.jpg",
+  },
+  {
+    icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
+    title: "portfolio",
+    type: {
+      en: "Personal Portfolio",
+      es: "Portfolio Personal",
+    },
+    shortDescription: {
+      en: "A website showcasing my profile, completed projects, contact form, social media links, and curriculum vitae",
+      es: "Pagina web que muestra mi perfil, proyectos realizados, formulario de contacto y links de redes sociales y curriculum vitae",
+    },
+    description: {
+      en: "A website showcasing my profile, completed projects, contact form, social media links, and curriculum vitae",
+      es: "Pagina web que muestra mi perfil, proyectos realizados, formulario de contacto y links de redes sociales y curriculum vitae",
+    },
+    repository: "https://github.com/facuaragon/portfolio",
+    deploy: "https://facundo-aragon.vercel.app/",
+    techs: ["JavaScript", "Next.js", "React", "HTML", "CSS", "Nodemailer"],
+    video: "portfolio.mp4",
+    image: "portfolio.jpeg",
+  },
+  {
+    icon: <DevterLogo width={40} height={40} fill={"#000"} />,
+    title: "devter",
+    type: {
+      en: "Personal Project",
+      es: "Proyecto Personal",
+    },
+    shortDescription: {
+      en: "Web application consisting of a Twitter clone for developers",
+      es: "Aplicación que consiste en un clon de twitter para desarrolladores",
+    },
+    description: {
+      en: "Development of a web application using Firebase Auth, Realtime Database, Firestore Database, and Storage, with GitHub login. It allows users to create 'devits' (tweets) and upload images.",
+      es: "Desarrollo de una aplicación web con Firebase Auth, Realtime Database, Firestore Database, Storage, con login de GitHub. Permite crear devits (tweets) y subir imágenes",
+    },
+    repository: "https://github.com/facuaragon/devter",
+    deploy: "https://devter-iota.vercel.app",
+    techs: [
+      "JavaScript",
+      "Next.js",
+      "React",
+      "Firebase Auth",
+      "Realtime Database",
+      "Firestore Database",
+      "Storage",
+      "HTML",
+      "CSS",
+    ],
+    video: "devter.mp4",
+    image: "devter.jpeg",
+  },
   {
     icon: <ConsumedicLogo width={40} height={40} fill={"#000"} />,
     title: "consumedic",
@@ -186,57 +259,5 @@ export const projects = [
     ],
     video: "dogs.mp4",
     image: "dogs.jpeg",
-  },
-  {
-    icon: <DevterLogo width={40} height={40} fill={"#000"} />,
-    title: "devter",
-    type: {
-      en: "Personal Project",
-      es: "Proyecto Personal",
-    },
-    shortDescription: {
-      en: "Web application consisting of a Twitter clone for developers",
-      es: "Aplicación que consiste en un clon de twitter para desarrolladores",
-    },
-    description: {
-      en: "Development of a web application using Firebase Auth, Realtime Database, Firestore Database, and Storage, with GitHub login. It allows users to create 'devits' (tweets) and upload images.",
-      es: "Desarrollo de una aplicación web con Firebase Auth, Realtime Database, Firestore Database, Storage, con login de GitHub. Permite crear devits (tweets) y subir imágenes",
-    },
-    repository: "https://github.com/facuaragon/devter",
-    deploy: "https://devter-iota.vercel.app",
-    techs: [
-      "JavaScript",
-      "Next.js",
-      "React",
-      "Firebase Auth",
-      "Realtime Database",
-      "Firestore Database",
-      "Storage",
-      "HTML",
-      "CSS",
-    ],
-    video: "devter.mp4",
-    image: "devter.jpeg",
-  },
-  {
-    icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
-    title: "portfolio",
-    type: {
-      en: "Personal Portfolio",
-      es: "Portfolio Personal",
-    },
-    shortDescription: {
-      en: "A website showcasing my profile, completed projects, contact form, social media links, and curriculum vitae",
-      es: "Pagina web que muestra mi perfil, proyectos realizados, formulario de contacto y links de redes sociales y curriculum vitae",
-    },
-    description: {
-      en: "A website showcasing my profile, completed projects, contact form, social media links, and curriculum vitae",
-      es: "Pagina web que muestra mi perfil, proyectos realizados, formulario de contacto y links de redes sociales y curriculum vitae",
-    },
-    repository: "https://github.com/facuaragon/portfolio",
-    deploy: "https://facundo-aragon.vercel.app/",
-    techs: ["JavaScript", "Next.js", "React", "HTML", "CSS", "Nodemailer"],
-    video: "portfolio.mp4",
-    image: "portfolio.jpeg",
   },
 ];
