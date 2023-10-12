@@ -2,6 +2,7 @@ import ConsumedicLogo from "@/components/icons/projectLogos/ConsumedicLogo";
 import DogsLogo from "@/components/icons/projectLogos/DogsLogo";
 import DevterLogo from "@/components/icons/projectLogos/DevterLogo";
 import PortfolioLogo from "@/components/icons/projectLogos/PortfolioLogo";
+import EcommerceLogo from "@/components/icons/projectLogos/EcommerceLogo";
 
 export const navbarMenu = {
   options: {
@@ -122,7 +123,7 @@ export const formErrors = {
 
 export const projects = [
   {
-    icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
+    icon: <EcommerceLogo width={40} height={40} fill={"#000"} />,
     title: "e-commerce",
     type: {
       en: "Sample E-Commerce",
