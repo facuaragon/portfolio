@@ -123,6 +123,34 @@ export const formErrors = {
 export const projects = [
   {
     icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
+    title: "e-commerce",
+    type: {
+      en: "Sample E-Commerce",
+      es: "Ejemplo de E-Commerce",
+    },
+    shortDescription: {
+      en: "E-commerce store where you can view products and categories, as well as add them to the shopping cart and pay through Mercado Pago.",
+      es: "Tienda de comercio electrónico en el cual se pueden ver los productos y categorías, asi como tambien agregar al carrito de compras y pagar mediante Mercado Pago.",
+    },
+    description: {
+      en: "E-commerce store where you can view products and categories, as well as add them to the shopping cart and pay through Mercado Pago.",
+      es: "Tienda de comercio electrónico en el cual se pueden ver los productos y categorías, asi como tambien agregar al carrito de compras y pagar mediante Mercado Pago.",
+    },
+    repository: "https://github.com/facuaragon/ecommerce-front",
+    deploy: "https://ecommerce-front-virid.vercel.app/",
+    techs: [
+      "Next.js",
+      "MongoDB",
+      "JavaScript",
+      "React",
+      "HTML",
+      "TaildwindCSS",
+    ],
+    video: "ecommerce.mp4",
+    image: "ecommerce.jpg",
+  },
+  {
+    icon: <PortfolioLogo width={40} height={40} fill={"#000"} />,
     title: "website",
     type: {
       en: "Journalist Portfolio",
